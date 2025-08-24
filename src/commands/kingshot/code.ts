@@ -51,7 +51,8 @@ export default {
     });
     const data = `sign=${sign}&fid=${fid}&cdk=${code}&captcha_code=&time=${currentTime}`;
 
-    const json = await redeemCode(fid, code);
+    const message = await redeemCode(fid, code);
+    console.log(message)
 
     const embed = new EmbedBuilder()
       .setTitle('Code Redeemed')
@@ -90,8 +91,11 @@ async function redeemCode(fid: number, code: string) {
   // Fill in Gift Code
   await page.fill('input[placeholder="Enter Gift Code"]', code);
 
+  // Wait until the confirm button is enabled (not disabled)
+  await page.waitForSelector('.exchange_btn:not(.disabled)', { timeout: 15000 });
+
   // Click Confirm
-  await page.click('.exchange_btn');
+  await page.click('.exchange_btn:not(.disabled)');
 
   // Wait for modal with result to appear
   await page.waitForSelector('.modal_content .msg', { timeout: 10000 });
