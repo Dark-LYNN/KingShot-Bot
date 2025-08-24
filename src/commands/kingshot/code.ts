@@ -76,31 +76,29 @@ async function redeemCode(fid: number, code: string) {
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  // Go to the gift code site
   await page.goto('https://ks-giftcode.centurygame.com/', { waitUntil: 'networkidle' });
 
-  // Fill in Player ID
+  // Step 1: enter Player ID
   await page.fill('input[placeholder="Player ID"]', fid.toString());
-
-  // Click Login
+  
+  // Step 2: wait for login button to be enabled and click it
+  await page.waitForSelector('.login_btn:not(.disabled)');
   await page.click('.login_btn');
-
-  // Wait for login to succeed (you may need to tweak this wait condition)
-  await page.waitForTimeout(2000);
-
-  // Fill in Gift Code
+  
+  // Step 3: wait for gift code input to appear (after login)
+  await page.waitForSelector('input[placeholder="Enter Gift Code"]:not([disabled])');
+  
+  // Step 4: enter the gift code
   await page.fill('input[placeholder="Enter Gift Code"]', code);
-
-  // Wait until the confirm button is enabled (not disabled)
-  await page.waitForSelector('.exchange_btn:not(.disabled)', { timeout: 15000 });
-
-  // Click Confirm
+  
+  // Step 5: wait for exchange button to become enabled
+  await page.waitForSelector('.exchange_btn:not(.disabled)');
+  
+  // Step 6: click exchange button
   await page.click('.exchange_btn:not(.disabled)');
-
-  // Wait for modal with result to appear
-  await page.waitForSelector('.modal_content .msg', { timeout: 10000 });
-
-  // Extract the message text
+  
+  // Step 7: wait for modal and grab message
+  await page.waitForSelector('.modal_content .msg');
   const message = await page.$eval('.modal_content .msg', el => el.textContent?.trim() || '');
 
   await browser.close();
