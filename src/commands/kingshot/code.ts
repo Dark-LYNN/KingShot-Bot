@@ -87,18 +87,23 @@ async function redeemCode(fid: number, code: string) {
   await loginBtn.waitFor({ state: 'visible' });
   await loginBtn.click();
   
-  // Step 3: wait for gift code input
+  // Step 3: Wait for character avatar to appear
+  const characterAvatar = page.locator('img.img.avatar');
+  await characterAvatar.waitFor({ state: 'visible', timeout: 15000 });
+  await characterAvatar.click();
+
+  // Step 4: wait for gift code input
   const codeInput = page.locator('input[placeholder="Enter Gift Code"]:not([disabled])');
   await codeInput.waitFor({ state: 'visible' });
   
-  // Step 4: type the gift code
+  // Step 5: type the gift code
   await codeInput.fill(code);
   
-  // Step 5: click exchange button (force to bypass .disabled)
+  // Step 6: click exchange button (force to bypass .disabled)
   const exchangeBtn = page.locator('.exchange_btn');
   await exchangeBtn.click({ force: true });
 
-  // Step 6: wait for modal message
+  // Step 7: wait for modal message
   const modalMsg = page.locator('.modal_content .msg');
   await modalMsg.waitFor({ state: 'visible', timeout: 15000 });
   const message = await modalMsg.textContent();
