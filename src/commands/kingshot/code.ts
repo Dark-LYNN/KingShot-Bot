@@ -80,7 +80,7 @@ async function redeemCode(fid: number, code: string) {
 
     // Step 1: enter Player ID
     const playerInput = page.locator('input[placeholder="Player ID"]');
-    await playerInput.fill(fid.toString());
+    await playerInput.fill(`${fid}`);
 
     // Step 2: wait for login button to be enabled and click it
     const loginBtn = page.locator('.login_btn:not(.disabled)');
