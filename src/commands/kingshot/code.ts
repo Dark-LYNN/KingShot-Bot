@@ -87,10 +87,6 @@ async function redeemCode(fid: number, code: string) {
     await loginBtn.waitFor({ state: 'visible', timeout: 15000 });
     await loginBtn.click();
 
-    // Optional: wait for avatar as sanity check
-    const avatar = page.locator('img.img.avatar');
-    await avatar.waitFor({ state: 'visible', timeout: 15000 });
-
     // Step 3: wait for gift code input to be enabled
     const codeInput = page.locator('input[placeholder="Enter Gift Code"]');
     await codeInput.waitFor({ state: 'visible', timeout: 20000 });
