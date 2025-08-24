@@ -94,14 +94,13 @@ async function redeemCode(fid: number, code: string) {
   // Step 4: type the gift code
   await codeInput.fill(code);
   
-  // Step 5: wait for exchange button to become enabled
-  const exchangeBtn = page.locator('.exchange_btn:not(.disabled)');
-  await exchangeBtn.waitFor({ state: 'visible' });
-  await exchangeBtn.click();
-  
-  // Step 6: wait for modal and grab message
+  // Step 5: click exchange button (force to bypass .disabled)
+  const exchangeBtn = page.locator('.exchange_btn');
+  await exchangeBtn.click({ force: true });
+
+  // Step 6: wait for modal message
   const modalMsg = page.locator('.modal_content .msg');
-  await modalMsg.waitFor({ state: 'visible' });
+  await modalMsg.waitFor({ state: 'visible', timeout: 15000 });
   const message = await modalMsg.textContent();
   
   await browser.close();
