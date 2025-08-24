@@ -90,15 +90,20 @@ async function redeemCode(fid: number, code: string) {
   // Step 3: Wait for character avatar to appear
   const characterAvatar = page.locator('img.img.avatar');
   await characterAvatar.waitFor({ state: 'visible', timeout: 15000 });
-  await characterAvatar.click();
 
   // Step 4: wait for gift code input
-  const codeInput = page.locator('input[placeholder="Enter Gift Code"]:not([disabled])');
-  await codeInput.waitFor({ state: 'visible' });
-  
-  // Step 5: type the gift code
+  const codeInput = page.locator('input[placeholder="Enter Gift Code"]');
+  await page.waitForFunction(
+    (selector) => {
+      const el = document.querySelector<HTMLInputElement>(selector);
+      return el && !el.disabled;
+    },
+    'input[placeholder="Enter Gift Code"]',
+    { timeout: 20000 }
+  );
   await codeInput.fill(code);
-  
+  await codeInput.waitFor({ state: 'visible' });
+    
   // Step 6: click exchange button (force to bypass .disabled)
   const exchangeBtn = page.locator('.exchange_btn');
   await exchangeBtn.click({ force: true });
