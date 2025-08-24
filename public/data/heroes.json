@@ -1,0 +1,1633 @@
+[
+  {
+    "jaeger": {
+      "name": "Jaeger",
+      "class": "Archer",
+      "type": "SSR",
+      "description": "Jaeger is a Mythic-quality Generation 3 hero in Kingshot, classified under the Archer class. You can unlock him through the Daily Deals and the Strongest Governor Event.",
+      "generation": 3,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/06/jaeger-icon-kingshot-298x300.webp",
+      "sources": ["Daily Deals", "Hero Rally", "Swordland Shop", "Strongest Governor Event"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/06/wanderwail-300x284.webp",
+          "HeroPower": 315000,
+          "HeroAttack": 764,
+          "HeroDefense": 630,
+          "HeroHealth": 4725,
+          "EscortAttack": 254,
+          "EscortDefense": 210,
+          "EscortHealth": 1575,
+          "TroopLethality": "+70.00%",
+          "TroopHealth": "+70.00%",
+          "skills": [
+            {
+              "name": "Sound of Silence – Conquest Skill",
+              "description": "“Hush now and watch the master work”. Jaeger silences and prevents the target from using skills for `5s` (skills already cast are not affected), dealing Attack * `300%` damage.",
+              "upgrades": ["`3s - 220%`", "`3.5s - 240%`", "`4s - 260%`", "`4.5s - 280%`", "`5s - 300%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/sound-of-silence-300x292.webp"
+            },
+            {
+              "name": "Hymn to Survival – Expedition Skill",
+              "description": "No ease or luxury can be enjoyed unless the lives of soldiers are well-guarded. Jaeger increases Defender Squads’ Health by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/hymn-to-survival-295x300.webp"
+            }
+          ]
+        },
+
+        "conquest": {
+          "Attack": 4045,
+          "Defense": 3330,
+          "Health": 24974,
+          "skills": [
+            {
+              "name": "Fatal Attraction",
+              "description": "Like a siren’s deadly song, Jaeger deals Attack * `224%` damage to enemies in the target area and stuns them for 2s.",
+              "upgrades": ["`160%`","`176%`","`192%`","`208%`","`224%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/fatal-attraction-282x300.webp"
+            },
+            {
+              "name": "Game of Chance",
+              "description": "Jaeger’s deadliest performances are also his most unpredictable. If successful, Jaeger deals Attack * `300%` damage or else restores the target’s Health equal to his Attack * 50%.",
+              "upgrades": ["`220%`","`240%`","`260%`","`280%`","`300%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/game-of-chance-289x300.webp"
+            },
+            {
+              "name": "Rumormonger",
+              "description": "A wandering bard’s knows how to take advantage of loose lips, increasing Enemy Damage Taken by `30%` for 3s.",
+              "upgrades": ["`10%`","`15%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/rumormonger-285x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+290.23%",
+          "Defense": "+290.23%",
+          "skills": [
+            {
+              "name": "The Tempest `(LEAD)`",
+              "description": "Jaeger’s triumphant music is a fine tool of intimidation, granting a 20% chance of increasing Squad’s damage dealt by `40%` for 3 turns.",
+              "upgrades": ["`8%`","`16%`","`24%`","`32%`","`40%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/the-tempest-290x300.webp"
+            },
+            {
+              "name": "The Resistance",
+              "description": "Music focuses the soldier’s mind. Jaeger grants all squads a 20% chance of reducing the total Enemy Squad’s Lethality by `50%` for 2 turns when attacking.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/the-resistance-288x300.webp"
+            },
+            {
+              "name": "The Celebration",
+              "description": "A rousing song unlocks new reserves of strength. Increases the total Squad’s Health by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/the-celeberation-278x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "eric": {
+      "name": "Eric",
+      "class": "Infantry",
+      "type": "SSR",
+      "description": "Eric is a Mythic-quality Generation 3 Hero in Kingshot, classified under the Infantry class. You can unlock him through the Hall of Heroes.",
+      "generation": 3,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/06/eric-avatar-icon.webp",
+      "sources": ["Hall of Heroes", "Swordland Shop"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/06/anvil-of-truth-300x281.webp",
+          "HeroPower": 315000,
+          "HeroAttack": 482,
+          "HeroDefense": 630,
+          "HeroHealth": 9450,
+          "EscortAttack": 161,
+          "EscortDefense": 210,
+          "EscortHealth": 3150,
+          "TroopLethality": "+70.00%",
+          "TroopHealth": "+70.00%",
+          "skills": [
+            {
+              "name": "Blessed Hammer – Conquest Skill",
+              "description": "Eric trusts not himself but his blessed warhammer, increasing damage by `30%`.",
+              "upgrades": ["`10%`", "`15%`", "`20%`", "`25%`", "`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/blessed-hammer-150x150.webp"
+            },
+            {
+              "name": "Vanguard – Expedition Skill",
+              "description": "A paladin must always lead by example from the front. Eric increases Defender Squad Defense by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/vanguard-300x277.webp"
+            }
+
+          ]
+        },
+        "conquest": {
+          "Attack": 2554,
+          "Defense": 3330,
+          "Health": 49950,
+          "skills": [
+            {
+              "name": "Ground Shock",
+              "description": "Eric imperils the ground with an almighty smash of his blessed hammer, dealing Attack * `168%` damage to the target ahead while reducing targets’ Attack Speed by 50% for 4s.",
+              "upgrades": ["`120%`","`132%`","`144%`","`156%`","`168%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/ground-shock-284x300.webp"
+            },
+            {
+              "name": "Veterancy",
+              "description": "Battle blows and armor scars are naught but glory for a paladin. Attacks against Eric have a `16%` chance of increasing Defense by `20%` for 2 seconds (max 5 stacks).",
+              "upgrades": ["`8% - 8%`","`10% - 11%`","`12% - 14%`","`14% - 17%`","`16% - 20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/veterancy-286x300.webp"
+            },
+            {
+              "name": "Hammer of Justice",
+              "description": "Eric casts his warhammer into the ground, dealing Attack * `112%` damage in a fan-shaped arc with a 30% chance of stunning the targets for 1s.",
+              "upgrades": ["`80%`","`88%`","`96%`","`104%`","`112%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/hammer-of-justice-295x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+290.23%",
+          "Defense": "+290.23%",
+          "skills": [
+            {
+              "name": "Holy Warrior",
+              "description": "The purity of Eric’s faith can cause even his enemies to stumble, reducing the total Enemy Squads’ Attack by `20%`.",
+              "upgrades": ["`4%`","`8%`","`12%`","`16%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/holy-warrior-281x300.webp"
+            },
+            {
+              "name": "Conviction",
+              "description": "Conviction is a shield for the righteous, reducing Squads’ Damage Taken by `20%`.",
+              "upgrades": ["`4%`","`8%`","`12%`","`16%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/conviction-283x300.webp"
+            },
+            {
+              "name": "Exhortation",
+              "description": "An inspiring leader can unlock new reserves of vitality. Eric increases the total Squads’ Health by 25%.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/exhortation-290x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "petra": {
+      "name": "Petra",
+      "class": "Cavalry",
+      "type": "SSR",
+      "description": "Petra is a Mythic-quality Generation 3 Hero in Kingshot, classified under the Cavalry class. You can unlock her through Hero Roulette.",
+      "generation": 3,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/06/petra-avatar-icon-300x280.webp",
+      "sources": ["Hero Roulette", "Swordland Shop"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/06/fates-writ-297x300.webp",
+          "HeroPower": 315000,
+          "HeroAttack": 630,
+          "HeroDefense": 630,
+          "HeroHealth": 6300,
+          "EscortAttack": 210,
+          "EscortDefense": 210,
+          "EscortHealth": 2100,
+          "TroopLethality": "+70%",
+          "TroopHealth": "+70%",
+          "skills": [
+            {
+              "name": "Weighted Deck – Conquest Skill",
+              "description": "Petra has become more skilled at weighting the cards of fate in her favor, increasing the upper and lower limit of her fluctuating skills by `150%`.",
+              "upgrades": ["`30%`", "`60%`", "`90%`", "`120%`", "`150%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/weighted-deck-300x296.webp"
+            },
+            {
+              "name": "Cosmic Eye – Expedition Skill",
+              "description": "“Strike!” The cards never fail to inform Petra of the right time to act. Petra increases Rally Squad Attack by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/cosmic-eye-300x283.webp"
+            }
+
+          ]
+        },
+        "conquest": {
+          "Attack": 3330,
+          "Defense": 3330,
+          "Health": 33300,
+          "skills": [
+            {
+              "name": "Dichotomoy",
+              "description": "Petra throws a tarot card at an enemy, dealing Attack * `378%` damage and inflicting one of the following effects: reducing the target’s Attack by 20% for 2s or stunning the target for 1.5s.",
+              "upgrades": ["`270%`","`297%`","`324%`","`351%`","`378%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/dichotomy-280x300.webp"
+            },
+            {
+              "name": "Change of Fate",
+              "description": "Petra curses an enemy, dealing floating damage based on the base value of Petra’s Attack * `70%`. The final damage is a random amount between 5% and 600% of that base value.",
+              "upgrades": ["`50%`","`55%`","`60%`","`65%`","`70%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/change-of-fate-286x300.webp"
+            },
+            {
+              "name": "Turn Card",
+              "description": "Petra reverses misfortune by healing a friendly hero with the lowest percentage of Health remaining based on the base value of Petra’s Attack * `140%`. The final Health restored is a random amount ranging between 5% and 400% of that base value.",
+              "upgrades": ["100%`","`110%`","`120%`","`130%`","`140%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/turn-card-291x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+290.23%",
+          "Defense": "+290.23%",
+          "skills": [
+            {
+              "name": "Evil Eye",
+              "description": "Grants all Squads’ Attack a 50% chance of cursing the target, increasing their damage taken by `50%`.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/evil-eye-294x300.webp"
+            },
+            {
+              "name": "The Favor",
+              "description": "Petra is known as a lucky fortune-teller to her soldiers, granting a 50% chance of increasing the Squads’ Attack by `50%`.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/the-favor-287x300.webp"
+            },
+            {
+              "name": "The Shield",
+              "description": "Petra’s divination navigates bad outcomes with a 40% chance of reducing damage taken by `50%` for all squads.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/the-shield-291x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "hilde": {
+      "name": "Hilde",
+      "class": "Cavalry",
+      "type": "SSR",
+      "description": "Hilde is a Mythic-quality Generation 2 hero in Kingshot, classified under the Cavalry class. You can unlock her through Daily Deals or the Hall of Governors event.",
+      "generation": 2,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/04/hilde-kingshot-300x294.webp",
+      "sources": ["Hall of Governors", "Strongest Governor Event", "Daily Deals", "Hero Rally", "Hall of Heroes (Gen 3 or higher)"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/04/revelation-150x150.webp",
+          "HeroPower": 270000,
+          "HeroAttack": 540,
+          "HeroDefense": 540,
+          "HeroHealth": 5400,
+          "EscortAttack": 180,
+          "EscortDefense": 180,
+          "EscortHealth": 1800,
+          "TroopLethality": "+60.00%",
+          "TroopHealth": "+60.00%",
+          "skills": [
+            {
+              "name": "Holy Invocation – Conquest Skill",
+              "description": "Soldiers swear by Hilde’s everyday miracles, increasing her healing effects by `70%`.",
+              "upgrades": ["`30%`", "`40%`", "`50%`", "`60%`", "`70%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/holy-invocation-293x300.webp"
+            },
+            {
+              "name": "Fortitude – Expedition Skill",
+              "description": "Hilde’s pious confidence in her cause is infectious, increasing Defender Squads’ Health by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/fortitude-300x286.webp"
+            }
+
+          ]
+        },
+        "conquest": {
+          "Attack": 2664,
+          "Defense": 2220,
+          "Health": 26640,
+          "skills": [
+            {
+              "name": "Rejuvenating Plea",
+              "description": "Immediately restores Health equal to her Attack * `280%` to all friendly heroes.",
+              "upgrades": ["`200%`","`220%`","`240%`","`260%`","`250%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/rejuvenating-plea-286x300.webp"
+            },
+            {
+              "name": "Redeemer",
+              "description": "Injury is no match for Hilde’s redeeming invocations. Immediately restores Health equal to her Attack * `140%` to the weakest friendly hero.",
+              "upgrades": ["`100%`","`110%`","`120%`","`130%`","`140%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/redeemer-279x300.webp"
+            },
+            {
+              "name": "Intimidation",
+              "description": "Psychological warfare is an age-old tactic. Disables the enemy target for 1s while dealing Attack * `196%` damage.",
+              "upgrades": ["`140%`","`154%`","`168%`","`182%`","`196%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/intimidation-284x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+240.19%",
+          "Defense": "+240.19%",
+          "skills": [
+            {
+              "name": "Noble Path",
+              "description": "Hilde’s exhaustive discipline develops soldiers into true weapons, increasing the total squads’ Attack and Defense by `15%` and `10%`.",
+              "upgrades": ["`3% - 2%`","`6% - 4%`","`9% - 6%`","`12% - 8%`","`15% - 10%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/nobel-path-274x300.webp"
+            },
+            {
+              "name": "Elixir of Strength",
+              "description": "Hilde uses her secret tonic to enhance the warriors’ strength, granting all squads’ attack a 25% chance of dealing `200%` damage.",
+              "upgrades": ["`120%`","`140%`","`160%`","`180%`","`200%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/elixir-of-strength-284x300.webp"
+            },
+            {
+              "name": "Trial by Fire",
+              "description": "Hilde’s devout prayer has a `40%` chance of reducing damage taken by 50% for all squads.",
+              "upgrades": ["`8%`","`16%`","`24%`","`32%`","`40%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/trial-by-fire-275x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "zoe": {
+      "name": "Zoe",
+      "class": "Infantry",
+      "type": "SSR",
+      "description": "Zoe is a Mythic-quality Generation 2 hero in Kingshot, classified under the Infantry class. You can unlock her through Hero Roulette.",
+      "generation": 2,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/04/zoe-gen2-kingshot-300x292.webp",
+      "sources": ["Hero Roulette", "Daily Deals (Gen 3 or higher)", "Hall of Heroes (Gen 3 or higher)"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/04/the-unrighteous-300x284.webp",
+          "HeroPower": 270000,
+          "HeroAttack": 414,
+          "HeroDefense": 540,
+          "HeroHealth": 8100,
+          "EscortAttack": 138,
+          "EscortDefense": 180,
+          "EscortHealth": 2700,
+          "TroopLethality": "+60.00%",
+          "TroopHealth": "+60.00%",
+          "skills": [
+            {
+              "name": "Death or Glory – Conquest Skill",
+              "description": "Zoe’s inner demon is awakened only by pain. Gaining a `24%` increased Attack until the end of the Battle once ‘Agony Rush’ is triggered.",
+              "upgrades": ["`8%`", "`12%`", "`16%`", "`20%`", "`24%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/death-or-glory-292x300.webp"
+            },
+            {
+              "name": "Dark Lady – Expedition Skill",
+              "description": "Zoe is a relentlessly demanding garrison commander, increasing Defender Squads’ Attack by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/dark-lady-300x290.png"
+            }
+
+          ]
+        },
+        "conquest": {
+          "Attack": 2043,
+          "Defense": 2664,
+          "Health": 39960,
+          "skills": [
+            {
+              "name": "Shield Strike",
+              "description": "Zoe’s unpredictable attacks easily enweb foes, dealing Attack * `84%` damage every 0.5s and amplifying damage taken by the target by `30%` for 2s.",
+              "upgrades": ["`60% - 10%`","`66% - 15%`","`72% - 20%`","`78% - 25%`","`84% - 30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/shield-strike-275x300.webp"
+            },
+            {
+              "name": "Agony Rush",
+              "description": "Zoe requires pain to reach peak physical performance. She immediately regains `40%` of max Health under 50% Health. Can only activate once per battle.",
+              "upgrades": ["`20%`","`25%`","`30%`","`35%`","`40%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/agony-rush-284x300.webp"
+            },
+            {
+              "name": "Holy Might",
+              "description": "Zoe inspires her fellow warriors to battle, boosting your heroes’ Attack Speed by `7%`.",
+              "upgrades": ["`3%`","`4%`","`5%`","`6%`","`7%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/holy-might-292x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+240.19%",
+          "Defense": "+240.19%",
+          "skills": [
+            {
+              "name": "Sundering Wound",
+              "description": "Your squads’ attacks gain a 20% chance of inflicting Sunder, dealing `40%` damage per turn for 3 turns.",
+              "upgrades": ["`8%`","`16%`","`24%`","`32%`","`40%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/sundering-wound-289x300.webp"
+            },
+            {
+              "name": "Stoic",
+              "description": "Zoe is a gifted female orator, and her rousing battle speeches increase the total Squads’ Attack by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/stoic-288x300.webp"
+            },
+            {
+              "name": "Infinite Arsenal",
+              "description": "Zoe strikes the enemy so completely and utterly that your squads’ attacks gain a 50% chance of amplifying enemy squads’ damage taken by `50%`.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/infinite-arsenal-283x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "marlin": {
+      "name": "Marlin",
+      "class": "Archer",
+      "type": "SSR",
+      "description": "Marlin is a Mythic-quality Generation 2 hero in Kingshot, classified under the Archer class. You can unlock him through the Hall of Heroes.",
+      "generation": 2,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/04/marlin-kingshot-300x292.webp",
+      "sources": ["Hall of Heroes", "Daily Deals (Gen 3 or higher)"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/04/mistweaver-300x288.webp",
+          "HeroPower": 270000,
+          "HeroAttack": 655,
+          "HeroDefense": 540,
+          "HeroHealth": 4050,
+          "EscortAttack": 218,
+          "EscortDefense": 180,
+          "EscortHealth": 1350,
+          "TroopLethality": "+60.00%",
+          "TroopHealth": "+60.00%",
+          "skills": [
+            {
+              "name": "Servant of Wine – Conquest Skill",
+              "description": "There’s no battlefield pick-me-up like Marlin’s special brew, healing your weakest hero by Attack * `15%` with each basic attack.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/servant-of-wine-300x286.webp"
+            },
+            {
+              "name": "Admiral of the Line – Expedition Skill",
+              "description": "A true admiral leads from the front. Increases Rally Squads’ Lethality by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/admiral-of-the-line-300x277.webp"
+            }
+
+          ]
+        },
+
+        "conquest": {
+          "Attack": 3235,
+          "Defense": 2220,
+          "Health": 19980,
+          "skills": [
+            {
+              "name": "Tidal Rush",
+              "description": "Marlin is a tidal force on the battlefield, literally and figuratively, when he unleashes a pulse dealing `280%` Area of Effect damage and immobilizing the enemy for 1.5s.",
+              "upgrades": ["`200%`","`220%`","`240%`","`260%`","`280%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/tidal-rush-277x300.webp"
+            },
+            {
+              "name": "Fermented Blow",
+              "description": "Marlin’s deadly airborne concoction deals Attack * `70%` Area of Effect damage.",
+              "upgrades": ["`50%`","`55%`","`60%`","`65%`","`70%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/fermented-blow-271x300.webp"
+            },
+            {
+              "name": "Fermented Blow",
+              "description": "Marlin’s deadly airborne concoction deals Attack * `70%` Area of Effect damage.",
+              "upgrades": ["`50%`","`55%`","`60%`","`65%`","`70%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/lucky-hit-281x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+240.19%",
+          "Defense": "+240.19%",
+          "skills": [
+            {
+              "name": "Wild Card",
+              "description": "Marlin, being unpredictable, has a 40% chance of increasing damage dealt by `50%` for all squads.",
+              "upgrades": ["`8%`","`16%`","`24%`","`32%`","`40%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/wild-card-275x300.webp"
+            },
+            {
+              "name": "Rumhead",
+              "description": "“Stiff rum can drown most any battlefield sorrow”. Marlin grants all squads a 20% chance of reducing the total Enemy Squads’ Lethality by 50% for 2 turns when attacking.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/rumhead-294x300.webp"
+            },
+            {
+              "name": "Dynamo",
+              "description": "Grants your squads’ attack a 50% chance of increasing damage dealt by `50%`.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/dynamo-285x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "amane": {
+      "name": "Amane",
+      "class": "Archer",
+      "type": "SR",
+      "description": "Amane (previously known as Mikoto) is an Epic hero in Kingshot, introduced with the June 26, 2025 update. She belongs to the Archer class and can be unlocked through Hero Recruitment and the Oasis & Beyond event",
+      "generation": 2,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/07/amane-avatar.webp",
+      "sources": ["Hero Recruitment", "Oasis & Beyond"],
+      "skills": {
+        "conquest": {
+          "Attack": 2157,
+          "Defense": 2220,
+          "Health": 13320,
+          "skills": [
+            {
+              "name": "Sakura Blossom",
+              "description": "Amane summons a protective enchantment, increasing all Hero and Escorts’ Attack by `3.5%` and Attack Speed by `4.5%` for 4s.",
+              "upgrades": ["`1.5% - 2.5%`","`2% - 3%`","`2.5% - 3.5%`","`3% - 4%`","`3.5% - 4.5%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/sakura-blossom-290x300.webp"
+            },
+            {
+              "name": "Fire Sigil",
+              "description": "Amane lobs a fiery sigil against the enemy, dealing Attack * `210%` damage.",
+              "upgrades": ["`150%`","`165%`","`180%`","`195%`","`210%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/fire-sigil-276x300.webp"
+            },
+            {
+              "name": "Divine Melody",
+              "description": "The dance of the umbrella is the dance of the Blade. Every 3 basic attacks increases Amane’s Attack Speed by `5%` until the end of the battle.",
+              "upgrades": ["`1%`","`2%`","`3%`","`4%`","`5%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/divine-melody-289x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+140.11%",
+          "Defense": "+140.11%",
+          "skills": [
+            {
+              "name": "Tri-Phalanx",
+              "description": "Amane’s trademark formation increases all Squads’ total Attack by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/tri-phalanx-286x300.webp"
+            },
+            {
+              "name": "Exorcism",
+              "description": "Amane’s skill at warding off evil increases Infirmary Healing Speed by `50%`.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/exorcism-150x150.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "yeonwoo": {
+      "name": "Yeonwoo",
+      "class": "Archer",
+      "type": "SR",
+      "description": "Yeonwoo is an Epic hero in Kingshot, introduced with the June 26, 2025 update. She belongs to the Archer class and can be unlocked through Hero Recruitment and the Oasis & Beyond event.\n\nShe’s a good joiner hero for Bear Hunt because her first skill boosts Lethality. Her second skill is an expedition skill that increases Academy research speed.",
+      "generation": 2,
+      "image": "https://kingshotdata.com/heroes/yeonwoo",
+      "sources": ["Hero Roulette", "Oasis & Beyond"],
+      "skills": {
+        "conquest": {
+          "Attack": 2157,
+          "Defense": 2220,
+          "Health": 13320,
+          "skills": [
+            {
+              "name": "Petalbloom",
+              "description": "Yeonwoo arcs Petalbloom outward in three waves, dealing Attack * 100%, Attack * `175%`, and Attack * `210%` damage respectively, with the third being area of effect damage.",
+              "upgrades": ["`125% - 150%`","`137.5% - 165%`","`150% - 180%`","`162.5% - 195%`","`175% - 210%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/petalbloom-277x300.png"
+            },
+            {
+              "name": "Falling Swallow",
+              "description": "The Falling Swallow technique weaves confusion in enemy ranks, dealing Attack * `140%` damage and reducing the target’s Attack Speed by `50%` for 2s.",
+              "upgrades": ["`100% - 30%`","`110% - 33%`","`120% - 40%`","`130% - 45%`","`140% - 50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/falling-swallow-295x300.webp"
+            },
+            {
+              "name": "Twin Fangs",
+              "description": "Yeonwoo’s unusual duel form is devilishly difficult to defend against, increasing Attack by `24%`.",
+              "upgrades": ["`8%`","`12%`","`16%`","`20%`","`24%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/twin-fangs-297x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+140.11%",
+          "Defense": "+140.11%",
+          "skills": [
+            {
+              "name": "On Guard",
+              "description": "“My blade and I are one”. Yeonwoo’s sword skills increase all Squads’ total Lethality by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/on-guard-280x300.png"
+            },
+            {
+              "name": "Well-Traveled",
+              "description": "Yeonwoo’s travels have secured a technological edge, increasing Research Speed by `15%`.",
+              "upgrades": ["`3%`","`6%`","`9%`","`12%`","`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/well-traveled-290x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "fahd": {
+      "name": "Fahd",
+      "class": "Cavalry",
+      "type": "SR",
+      "description": "Fahd is an Epic hero in Kingshot, introduced with the June 26, 2025 update. He belongs to the Cavalry class and can be unlocked through Hero Recruitment and the Oasis & Beyond event.",
+      "generation": 2,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/07/fahd-avatar.webp",
+      "sources": ["Hero Recruitment", "Oasis & Beyond"],
+      "skills": {
+        "conquest": {
+          "Attack": 1776,
+          "Defense": 2220,
+          "Health": 17760,
+          "skills": [
+            {
+              "name": "Sandstorm",
+              "description": "The blinding sandstorm reduces Enemy Squads’ Attack by `5%` for 2s.",
+              "upgrades": ["`1%`","`2%`","`3%`","`4%`","`5%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/sandstorm-281x300.png"
+            },
+            {
+              "name": "Eagle Wings",
+              "description": "After unleashing the “Sandstorm”, Fahd’s eagle directs allies’ attack, increasing his and nearby friendly Squads’ Attack by `35%` for 2s.",
+              "upgrades": ["`15%`","`20%`","`25%`","`30%`","`35%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/eagle-wings-297x300.png"
+            },
+            {
+              "name": "Dune General",
+              "description": "The harsh desert has given Fahd a strong sense for when to pounce, increasing his Attack Speed by `30%`.",
+              "upgrades": ["`10%`","`15%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/dune-general-289x300.png"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+140.11%",
+          "Defense": "+140.11%",
+          "skills": [
+            {
+              "name": "Desert Eclipse",
+              "description": "A rising cloud of sand is terrible for visibility, reducing all Enemy Squads’ Damage Dealt by `20%`.",
+              "upgrades": ["`4%`","`8%`","`12%`","`16%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/desert-eclipse-284x300.webp"
+            },
+            {
+              "name": "Pathfinder",
+              "description": "https://kingshotdata.com/wp-content/uploads/2025/06/pathfinder-291x300.webp",
+              "upgrades": ["`20%`","`40%`","`60%`","`80%`","`100%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/06/pathfinder-291x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+
+
+  {
+    "jabel": {
+      "name": "Jabel",
+      "class": "Cavalry",
+      "type": "SSR",
+      "description": "Jabel is a Mythic-quality Generation 1 hero in Kingshot, belonging to the Cavalry class. She is the easiest Mythic hero to unlock in Generation 1 since there are multiple ways to obtain her. The main methods include the 7-day sign-in gift for new players and hero recruitment in the Hero Hall.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/03/jabel.webp",
+      "sources": ["7-day sign-in gift", "Path Of Growth", "Recruit Heroes", "Watchtower Intel", "Hall of Heroes", "Swordland Shop", "Jabel's Courage - Pack"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/03/greaves-of-faith-jabel-exclusive-150x150.webp",
+          "HeroPower": 225000,
+          "HeroAttack": 450,
+          "HeroDefense": 450,
+          "HeroHealth": 4500,
+          "EscortAttack": 150,
+          "EscortDefense": 150,
+          "EscortHealth": 1500,
+          "TroopLethality": "+50.00%",
+          "TroopHealth": "+50.00%",
+          "skills": [
+            {
+              "name": "Crimson Spirit – Conquest Skill",
+              "description": "Jabel’s will to win helps breakthrough her limitation, increasing damage dealt by `30%`.",
+              "upgrades": ["`10%`", "`15%`", "`20%`", "`25%`", "`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/crimson-spirit-300x288.webp"
+            },
+            {
+              "name": "Divine Strength – Expedition Skill",
+              "description": "Based on steadfast faith, Defender Troops’ Lethality is increased by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/divine-strength-150x150.webp"
+            }
+
+          ]
+        },
+
+        "conquest": {
+          "Attack": 2220,
+          "Defense": 2220,
+          "Health": 22200,
+          "skills": [
+            {
+              "name": "Gallant Throw",
+              "description": "Throws a spear that pierces defenses, dealing Attack * `252%` area of effect damage and pinning the targets for 1.5s.",
+              "upgrades": ["`180%`","`198%`","`216%`","`234%`","`252%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/gallant-throw-285x300.webp"
+            },
+            {
+              "name": "Brave the Storm",
+              "description": "A true knight bravely confronts enemies, dealing Attack * `210%` damage to the target.",
+              "upgrades": ["`150%`","`165%`","`180%`","`195%`","`210%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/brave-the-storm-291x300.webp"
+            },
+            {
+              "name": "Persistence",
+              "description": "Adversity ignites endless potential, increasing Attack Speed by `60%` when Health is below 50%.",
+              "upgrades": ["`20%`","`30%`","`40%`","`50%`","`60%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/persistence-286x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+200.16%",
+          "Defense": "+200.16%",
+          "skills": [
+            {
+              "name": "Rally Flag `(LEAD)`",
+              "description": "Jabel with her banner-like red armor, has a `40%` chance of reducing damage taken by 50% for all squads.",
+              "upgrades": ["`8%`","`16%`","`24%`","`32%`","`40%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/rally-flag-276x300.webp"
+            },
+            {
+              "name": "Hero’s Domain",
+              "description": "Jabel, a fearless knight, grants all squads a 50% chance of dealing `50%` more damage when attacking.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/heros-domain-281x300.webp"
+            },
+            {
+              "name": "Youthful Rage",
+              "description": "Jabel’s valiant spirit inspires everyone increasing damage dealt by `25%` for all squads.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/youthful-rage-288x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  }, {
+    "helga": {
+      "name": "Helga",
+      "class": "Infantry",
+      "type": "SSR",
+      "description": "Helga is a Mythic-quality Generation 1 hero in Kingshot. She belongs to the Infantry class, making her a melee hero specializing in close combat. You can unlock Helga by making your first purchase in the game.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/03/helga-kingshot-300x296.webp",
+      "sources": ["1st Purchase", "VIP Special Packs"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/03/bands-of-tyre-helga-exclusive-gear-150x150.webp",
+          "HeroPower": 225000,
+          "HeroAttack": 450,
+          "HeroDefense": 450,
+          "HeroHealth": 4500,
+          "EscortAttack": 150,
+          "EscortDefense": 150,
+          "EscortHealth": 1500,
+          "TroopLethality": "+50.00%",
+          "TroopHealth": "+50.00%",
+          "skills": [
+            {
+              "name": "Valiant Fury – Conquest Skill",
+              "description": "Fueled by fury, Helga increases her damage dealt by `30%`.",
+              "upgrades": ["`10%`", "`15%`", "`20%`", "`25%`", "`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/valiant-fury-300x284.webp"
+            },
+            {
+              "name": "Zeal – Expedition Skill",
+              "description": "Helga joins the rally, increasing Rally Troops’ Lethality by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/zeal-150x150.webp"
+            }
+
+          ]
+        },
+
+        "conquest": {
+          "Attack": 1873,
+          "Defense": 2220,
+          "Health": 36630,
+          "skills": [
+            {
+              "name": "Antler Assault",
+              "description": "Performs an antler charge, dealing Attack * `224%` area of effect damage, knocking the targets back, and stunning them for 1s.",
+              "upgrades": ["`160%`","`176%`","`192%`","`208%`","`224%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/antler-assault-285x300.webp"
+            },
+            {
+              "name": "Spear Charge",
+              "description": "Deals Attack * `210%` damage to the target.",
+              "upgrades": ["`150%`","`165%`","`180%`","`195%`","`210%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/spear-charge-291x300.webp"
+            },
+            {
+              "name": "Fury",
+              "description": "When taking damage, there is a 10% chance of increasing Attack by `12%` for 3s. Stacks up to 5 times.",
+              "upgrades": ["`4%`","`6%`","`8%`","`10%`","`12%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/fury-276x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+200.16%",
+          "Defense": "+200.16%",
+          "skills": [
+            {
+              "name": "Oath of Guardian `(LEAD)`",
+              "description": "Helga has a `40%` chance of reducing damage taken by 50% for all squads.",
+              "upgrades": ["`8%`","`16%`","`24%`","`32%`","`40%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/oat-of-guardina-279x300.webp"
+            },
+            {
+              "name": "Echoes of Valhalla",
+              "description": "Helga blows the horn to motivate the squad, increasing the total Squads’ Attack by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/echoes-of-valhalla-286x300.webp"
+            },
+            {
+              "name": "Nature’s Balance",
+              "description": "Helga invites everyone to embrace nature, increasing the total Squads’ Lethality by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/natures-balance-290x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  }, {
+    "saul": {
+      "name": "Saul",
+      "class": "Archer",
+      "type": "SSR",
+      "description": "Saul is a Mythic-quality Generation 1 hero in Kingshot. He belongs to the Archer class, making him a ranged hero. You can unlock Saul through Daily Deals, Hero Roulette, Hall of Heroes, and the Swordland Shop.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/03/saul-kingshot-300x290.webp",
+      "sources": ["Daily Deals", "Hero Roulette", "Hall of Heroes", "Swordland Shop"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/03/rabbitgear-cannon-150x150.webp",
+          "HeroPower": 225000,
+          "HeroAttack": 546,
+          "HeroDefense": 450,
+          "HeroHealth": 3375,
+          "EscortAttack": 182,
+          "EscortDefense": 150,
+          "EscortHealth": 1125,
+          "TroopLethality": "+50.00%",
+          "TroopHealth": "+50.00%",
+          "skills": [
+            {
+              "name": "Fearless Advance – Conquest Skill",
+              "description": "Saul’s brust of strong determination under extreme situation increases his attack by `24%`.",
+              "upgrades": ["`6%`", "`12%`", "`16%`", "`20%`", "`24%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/fearless-advance-300x283.webp"
+            },
+            {
+              "name": "Defend to Attack – Expedition Skill",
+              "description": "Increases Defender Troops Attack by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/defend-to-attack-300x279.webp"
+            }
+
+          ]
+        },
+        "conquest": {
+          "Attack": 2697,
+          "Defense": 2220,
+          "Health": 16650,
+          "skills": [
+            {
+              "name": "Rapidfire",
+              "description": "Delivers multiple hits, each dealing Attack * `75%` damage each and stunning the target for 2s.",
+              "upgrades": ["`55%`","`60%`","`65%`","`70%`","`75%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/rapidfire-284x300.webp"
+            },
+            {
+              "name": "Final Prayer",
+              "description": "When Health is below 50%, Saul’s Defense is increased by `150%`.",
+              "upgrades": ["`50%`","`75%`","`100%`","`125%`","`150%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/final-prayer-278x300.webp"
+            },
+            {
+              "name": "Superior Techniques",
+              "description": "Increases Attack Speed by `30%`.",
+              "upgrades": ["`10%`","`15%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/superior-techniques-276x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+200.16%",
+          "Defense": "+200.16%",
+          "skills": [
+            {
+              "name": "Taskforce Training",
+              "description": "As a member of the task force, Saul’s unique training program is highly empowering, increasing the total Squads’ Defense and Health by `10%` and `15%`.",
+              "upgrades": ["`2% - 3%`","`4% - 6%`","`6% - 9%`","`8% - 12%`","`10% - 15%`"],
+              "image": ""
+            },
+            {
+              "name": "Resourceful",
+              "description": "Saul’s efficient construction management increases Construction Speed by 15%, and his proficiency in maximizing resource utilization reduces Construction Costs by `15%`.",
+              "upgrades": ["`3%`","`6%`","`9%`","`12%`","`15%`"],
+              "image": ""
+            },
+            {
+              "name": "Positional Batter",
+              "description": "Sault masterfully manipulates the battlefield, increasing the total Squads’ Lethality by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/positional-batter-kingshot-276x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  }, {
+    "amadeus": {
+      "name": "Amadeus",
+      "class": "Infantry",
+      "type": "SSR",
+      "description": "Amadeus is a Generation 1 Infantry hero in Kingshot. You can unlock him through the Hall of Governors or buy VIP special packs. Once Generation 1 ends, VIP special packs are the only way to unlock him.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/03/amadeus-297x300.webp",
+      "sources": ["Hall of Governors (Gen 1)", "VIP Special Packs"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/03/aegis-of-fate-150x150.webp",
+          "HeroPower": 281250,
+          "HeroAttack": 431,
+          "HeroDefense": 562,
+          "HeroHealth": 8437,
+          "EscortAttack": 143,
+          "EscortDefense": 187,
+          "EscortHealth": 2812,
+          "TroopLethality": "+62.50%",
+          "TroopHealth": "+62.50%",
+          "skills": [
+            {
+              "name": "Double Parry – Conquest Skill",
+              "description": "Amadeus is a skillful parrier, reducing damage taken by `30%`.",
+              "upgrades": ["`10%`", "`15%`", "`20%`", "`25%`", "`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/double-parry-300x294.webp"
+            },
+            {
+              "name": "Discernment – Expedition Skill",
+              "description": "Amadeus attacks in a sword-tailored formation, increasing Rally Attack by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/discernment-300x286.webp"
+            }
+          ]
+        },
+
+        "conquest": {
+          "Attack": 2128,
+          "Defense": 2220,
+          "Health": 41624,
+          "skills": [
+            {
+              "name": "Combo Slash",
+              "description": "Amadeus casts enemies in the target area upward followed by three powerful slashes, each dealing Attack * `224%` damage.",
+              "upgrades": ["`160%`","`176%`","`192%`","`208%`","`224%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/combo-slash-277x300.webp"
+            },
+            {
+              "name": "Arcane Swordship",
+              "description": "Amadeus releases a burst of arcane energy with each sword slash, dealing Attack * `23%` damage to frontal foes.",
+              "upgrades": ["`15%`","`17%`","`19%`","`21%`","`23%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/arcane-swordship-278x300.webp"
+            },
+            {
+              "name": "Onslaught",
+              "description": "Amadeus is a master at pressing his advantage, increasing Attack by `48%` when Health is below 50%.",
+              "upgrades": ["`16%`","`24%`","`32%`","`40%`","`48%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/onslaught-282x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+260.20%",
+          "Defense": "+260.20%",
+          "skills": [
+            {
+              "name": "Battle Ready",
+              "description": "Young ranger Amadeus excels in boosting morale, increasing the total Squads’ Lethality by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/battle-ready-289x300.webp"
+            },
+            {
+              "name": "Way of the Blade",
+              "description": "Amadeus imparts the secrets of swordsmanship, increasing the total Squads’ Attack by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/way-of-the-blade-275x300.webp"
+            },
+            {
+              "name": "Unrighteous Strike",
+              "description": "Amadeus’ unique swordplay has a `40%` chance of increasing damage dealt by 50% for all squads.",
+              "upgrades": ["`8%`","`16%`","`24%`","`32%`","`40%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/unrighteous-strike-281x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "chenko": {
+      "name": "Chenko",
+      "class": "Cavalry",
+      "type": "SR",
+      "description": "Chenko is an Epic Hero from the Cavalry class in Kingshot. You can unlock her in a few ways — through the Path of Growth event (which happens in new kingdoms), through hero recruitment, or by getting her shards from Intel Missions. Unlike most heroes who only need 10 shards to recruit, Chenko needs 40 shards for her recruitment.\n\nShe’s considered a top-tier joiner hero mainly because of her expedition skills, especially her first skill, “Stand of Arms,” which is useful for dealing damage to the Bear during the Bear Hunt event.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/04/chenko-avatar.webp",
+      "sources": ["Path of Growth", "Hero Recruitment", "Watchtower Intel"],
+      "skills": {
+        "conquest": {
+          "Attack": 1776,
+          "Defense": 2220,
+          "Health": 17760,
+          "skills": [
+            {
+              "name": "Burst Fire",
+              "description": "Unleashes a rapid barrage, dealing Attack * `75%` damage to enemies in front every 0.5s for 2s.",
+              "upgrades": ["`55%`","`60%`","`65%`","`70%`","`75%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/burst-fire-284x300.webp"
+            },
+            {
+              "name": "Defense Upgrade",
+              "description": "Chenko upgrades her armor, increasing Defense by `70%`.",
+              "upgrades": ["`25%`","`37.5%`","`50%`","`62.5%`","`70%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/defense-upgrade-277x300.webp"
+            },
+            {
+              "name": "Weapon Upgrade",
+              "description": "Chenko’s upgraded weapon boosts Attack by `24%`.",
+              "upgrades": ["`8%`","`12%`","`16%`","`20%`","`24%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/weapon-upgrade-290x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+140.11%",
+          "Defense": "+140.11%",
+          "skills": [
+            {
+              "name": "https://kingshotdata.com/wp-content/uploads/2025/04/weapon-upgrade-290x300.webp",
+              "description": "Chenko implements advanced weaponry for our soldiers, increasing the total Squads’ Lethality by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/stand-of-arms-286x300.webp"
+            },
+            {
+              "name": "Shield Wall",
+              "description": "Enhances troop armor with a keen engineering eye, reducing damage taken by `20%` for all troops.",
+              "upgrades": ["`4%`","`8%`","`12%`","`16%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/04/shield-wall-291x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "gordon": {
+      "name": "Gordon",
+      "class": "Cavalry",
+      "type": "SR",
+      "description": "Gordon is an Epic Hero from the Cavalry class in Kingshot. You can unlock him through Hero Recruitment, Intel Missions, or by getting his shards from the Alliance Championship store.\n\nHe’s mainly used as a joiner hero for Garrison because of his first expedition skill, which provides a Health boost.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/07/gordon-avatar.webp",
+      "sources": ["Hero Recruitment", "Watchtower Intel", "Alliance Championship Store"],
+      "skills": {
+        "conquest": {
+          "Attack": 1776,
+          "Defense": 2220,
+          "Health": 17760,
+          "skills": [
+            {
+              "name": "BBQ Feast",
+              "description": "Gordon prepares a lavish feast, restoring Health by Attack * `280%` to all troops and increasing Attack by `7%` for all troops for 4s.",
+              "upgrades": ["`200% - 5%`","`220% - 5.5%%`","`240% - 6%`","`260% - 6.5%`","`280% - 7%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/bbq-feast-286x300.webp"
+            },
+            {
+              "name": "Culinary Chaos",
+              "description": "Gordon’s life in a chaotic kitchen reduces his damage taken by `30%`.",
+              "upgrades": ["`10%`","`15%%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/culinary-chaos-292x300.webp"
+            },
+            {
+              "name": "Emergency Snack",
+              "description": "Gordon’s regular snacking restores Health equal to Attack * `70%` every 5s.",
+              "upgrades": ["`50%`","`55%`","`60%`","`65%`","`70%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/emergency-snakc-297x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+140.11%",
+          "Defense": "+140.11%",
+          "skills": [
+            {
+              "name": "Super Nutrients `(LEAD)`",
+              "description": "Gordon’s culinary masterpieces invigorate our soldiers, increasing total Squads’ Health by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/Super-nutrients-284x300.webp"
+            },
+            {
+              "name": "Trash Talk",
+              "description": "Beyond delicious meals, Gordon’s trash talk increases the total Squads’ Attack by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/trash-talk-150x150.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "diana": {
+      "name": "Diana",
+      "class": "Archer",
+      "type": "SR",
+      "description": "Diana is an Epic Hero from the Archer class in Kingshot. You can unlock her only through the Desert Trial event.\n\nShe’s a must-have because her expedition skills cut down Stamina Cost for Rallies and Marches, plus she can boost March Speed by up to 100% when fully upgraded. Just keep in mind that these effects only work if she’s part of the rally or march.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/03/diana-avatar-icon-300x289.webp",
+      "sources": ["Desert Trial Event"],
+      "skills": {
+        "conquest": {
+          "Attack": 2157,
+          "Defense": 2220,
+          "Health": 13320,
+          "skills": [
+            {
+              "name": "Incendiary Arrows",
+              "description": "Diana fires an Incendiary Shot, dealing Attack * `290%` damage to the target and Attack * `98%` damage to nearby enemies.",
+              "upgrades": ["`210% - 70%`","`230% - 77%`","`250% - 84%`","`270% - 91%`","`190% - 98%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/icendiary-arrows-275x300.webp"
+            },
+            {
+              "name": "Sharpshooter",
+              "description": "Increases Attack Speed by `30%`.",
+              "upgrades": ["`10%`","`15%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/sharpshooter-289x300.webp"
+            },
+            {
+              "name": "Deadly Strike",
+              "description": "With a sharp eye for vulnerabilities, Diana increases her Crit Rate by `20%`.",
+              "upgrades": ["`7%`","`10%`","`13%`","`16%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/deadly-strike-286x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+110.08%",
+          "Defense": "+110.08%",
+          "skills": [
+            {
+              "name": "Iron Constitution `(LEAD)`",
+              "description": "The unique arts of the wilderness rangers reduce Governor Stamina Cost by `20%`.",
+              "upgrades": ["`10%`","`12%`","`15%`","`18%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/iron-constitution-278x300.webp"
+            },
+            {
+              "name": "Quick Paced",
+              "description": "Increases March Speed by 100%.",
+              "upgrades": ["`20%`","`40%`","`60%`","`80%`","`100%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/03/quick-paced-290x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "howard": {
+      "name": "Howard",
+      "class": "Infantry",
+      "type": "SR",
+      "description": "Howard is an Epic Hero from the Infantry class in Kingshot. You can get his shards through Hero Recruitment, Conquest Battles, and Intel Missions.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/07/howard-avatar-300x280.webp",
+      "sources": ["Hero Recruitment", "Conquest Battles", "Watchtower Intel"],
+      "skills": {
+        "conquest": {
+          "Attack": 1361,
+          "Defense": 2220,
+          "Health": 26640,
+          "skills": [
+            {
+              "name": "Shielded Strike",
+              "description": "Howard gives an enemy a solid whack with his heavy shield, knocking the target back while dealing Attack * `280%` Area of Effect damage.",
+              "upgrades": ["`200%`","`220%`","`240%`","`260%`","`280%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/shielded-strike-295x300.webp"
+            },
+            {
+              "name": "Joint Defense",
+              "description": "Howard leads the effort to fortify defenses, increasing Defense by `15%` for all heroes.",
+              "upgrades": ["`5%`","`7.5%`","`10%`","`12.5%`","`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/joint-defense-287x300.webp"
+            },
+            {
+              "name": "Shield Block",
+              "description": "Howard trades in his shield for an upgraded model, reducing damage taken by `30%`.",
+              "upgrades": ["`10%`","`15%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/shield-block-290x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+140.11%",
+          "Defense": "+140.11%",
+          "skills": [
+            {
+              "name": "Defenders’ Edge `(LEAD)`",
+              "description": "Howard guards our troops with his shield, reducing damage taken by `20%` for all troops.",
+              "upgrades": ["`4%`","`8%`","`12%`","`16%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/defenders-edge-287x300.webp"
+            },
+            {
+              "name": "Weaken",
+              "description": "Howard’s intimidating presence reduces the total Enemy Squads’ Attack by 20%.",
+              "upgrades": ["`4%`","`8%`","`12%`","`16%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/weaken-300x288.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "quinn": {
+      "name": "Quinn",
+      "class": "Archer",
+      "type": "SR",
+      "description": "Quinn is an Epic Hero from the Archer class in Kingshot. He’s unlocked during the tutorial, and you can also get his shards through Hero Recruitment or Intel Missions.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/07/quinn-avatar-300x288.webp",
+      "sources": ["Hero Recruitment", "Watchtower Intel"],
+      "skills": {
+        "conquest": {
+          "Attack": 2157,
+          "Defense": 2220,
+          "Health": 13320,
+          "skills": [
+            {
+              "name": "Headshot",
+              "description": "The upgraded Crossbow deals Attack * `560%` damage.",
+              "upgrades": ["`400%`","`440%`","`480%`","`520%`","`560%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/headshot-284x300.webp"
+            },
+            {
+              "name": "Quick Shot",
+              "description": "Years of training increases Quinn’s Attack Speed by `30%.`",
+              "upgrades": ["`10%`","`15%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/quick-shot-290x300.webp"
+            },
+            {
+              "name": "Natural Selection",
+              "description": "Quinn’s expert survival skills increase his damage dealt by `30%`.",
+              "upgrades": ["`10%`","`15%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/natural-selection-291x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+140.11%",
+          "Defense": "+140.11%",
+          "skills": [
+            {
+              "name": "Sixth Sense `(LEAD)`",
+              "description": "Senses for dangers ahead, reducing damage taken by `20%` for all troops.",
+              "upgrades": ["`4%`","`8%`","`12%`","`16%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/sixth-sense-290x300.webp"
+            },
+            {
+              "name": "Precision Shot",
+              "description": "Quinn grants all soldiers a 50% chance of dealing `50%` more damage when attacking.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/precision-shot-300x296.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "olive": {
+      "name": "Olive",
+      "class": "Archer",
+      "type": "R",
+      "description": "Olive is a Rare Hero from the Archer class in Kingshot. You can unlock her through Hero Recruitment, Intel Missions, and Conquest Battles.\n\nShe is a growth-focused hero who boosts your Town’s Bread Output and also increases Bread Gathering Speed when included in a gathering march.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/07/olive-avatar-300x293.webp",
+      "sources": ["Hero Recruitment", "Watchtower Intel", "Conquest Battles"],
+      "skills": {
+        "conquest": {
+          "Attack": 1752,
+          "Defense": 2220,
+          "Health": 10822,
+          "skills": [
+            {
+              "name": "Rain of Arrows",
+              "description": "Olive launches a hail of arrows, dealing Attack * `252%` Area of Effect Damage around the target.",
+              "upgrades": ["`180%`","`198%`","`216%`","`234%`","`252%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/rain-of-arrows-290x300.webp"
+            },
+            {
+              "name": "Target Lock",
+              "description": "Olive paints a bullseye on a target, raising damage inflicted on the target by `30%` for this attack.",
+              "upgrades": ["`10%`","`15%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/target-lock-293x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+90.07%",
+          "Defense": "+90.07%",
+          "skills": [
+            {
+              "name": "Green Thumb",
+              "description": "Olive’s unmatched baking skills increase the Town’s Mill Output by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/green-thumb-287x300.webp"
+            },
+            {
+              "name": "Forager’s Luck",
+              "description": "Olive’s expertise in logistics increases her Resource Gathering Speed in the Wilderness by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/foragers-luck-296x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "edwin": {
+      "name": "Edwin",
+      "class": "Cavalry",
+      "type": "R",
+      "description": "Edwin is a Rare Hero from the Cavalry class in Kingshot. You can unlock him through Hero Recruitment, Intel Missions, and Conquest Battles.\n\nHe’s a growth-focused hero who boosts your Town’s Stone Output and also increases Stone Gathering Speed when included in a gathering march.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/07/edwin-avatar-300x284.webp",
+      "sources": ["Hero Recruitment", "Watchtower Intel", "Conquest Battles"],
+      "skills": {
+        "conquest": {
+          "Attack": 1442,
+          "Defense": 2220,
+          "Health": 14430,
+          "skills": [
+            {
+              "name": "Shrapnel Load",
+              "description": "Edwin throws out a homemade explosive, dealing Attack * `196%` Area of Effect Damage to the target and its nearby enemies.",
+              "upgrades": ["`140%`","`154%`","`168%`","`182%`","`196%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/shrapnel-load-290x300.webp"
+            },
+            {
+              "name": "Detonate",
+              "description": "Edwin’s explosives have a `20%` chance of stunning the targets for `1.5s`.",
+              "upgrades": ["`10% - 0.5s`","`15% - 0.5s`","`15% - 1s`","`20% - 1s`","`20% - 1.5s`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/detonate-150x150.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+90.07%",
+          "Defense": "+90.07%",
+          "skills": [
+            {
+              "name": "Demolitions Expert",
+              "description": "Edwin uses his knowledge of minerals, increasing the Town’s Quarry Output by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/demolitions-expert-296x300.webp"
+            },
+            {
+              "name": "Stone Mining",
+              "description": "Edwin’s expert quarrying techniques increase his Stone Mining Speed in the Wilderness by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/stone-mining-150x150.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "seth": {
+      "name": "Seth",
+      "class": "Infantry",
+      "type": "R",
+      "description": "Seth is a Rare Hero from the Infantry class in Kingshot. You can unlock him through Hero Recruitment, Intel Missions, and Conquest Battles.\n\nHe’s a growth-focused hero who boosts your Town’s Iron Output and also increases Iron Gathering Speed when included in a gathering march.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/07/seth-avatar-300x289.webp",
+      "sources": ["Hero Recruitment", "Watchtower Intel", "Conquest Battles"],
+      "skills": {
+        "conquest": {
+          "Attack": 1106,
+          "Defense": 2220,
+          "Health": 21644,
+          "skills": [
+            {
+              "name": "Hammer Burn",
+              "description": "Seth swings his hammer forward in a devastating arc, dealing Attack * `280%` damage.",
+              "upgrades": ["`200%`","`220%`","`240%`","`260%`","`280%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/hammer-burn-278x300.webp"
+            },
+            {
+              "name": "Armor Enhancement",
+              "description": "Seth upgrades his armor to reduce damage taken by `30%`.",
+              "upgrades": ["`10%`","`15%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/armor-enhancement-300x291.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+90.07%",
+          "Defense": "+90.07%",
+          "skills": [
+            {
+              "name": "Burnished Iron",
+              "description": "Seth passes on his passion for iron mining to everyone, increasing the Town’s Iron Output by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/burnished-iron-287x300.webp"
+            },
+            {
+              "name": "Craftsmanship",
+              "description": "Seth has a special bond with Iron, increasing his Iron Mining Speed in the Wilderness by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/craftsmanship-300x296.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "forrest": {
+      "name": "Forrest",
+      "class": "Infantry",
+      "type": "R",
+      "description": "Forrest is a Rare Hero from the Infantry class in Kingshot. You can unlock him through Hero Recruitment, Intel Missions, and Conquest Battles.\n\nHe’s a growth-focused hero who boosts your Town’s Wood Output and also increases Wood Gathering Speed when included in a gathering march.",
+      "generation": 1,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/07/forrest-avatar-300x296.webp",
+      "sources": ["Hero Recruitment", "Watchtower Intel", "Conquest Battles"],
+      "skills": {
+        "conquest": {
+          "Attack": 1106,
+          "Defense": 2220,
+          "Health": 21644,
+          "skills": [
+            {
+              "name": "Axe Whirl",
+              "description": "Forrest’s axe pirouette deals damage of Attack * `110%` per 0.5s to nearby enemies for 3s.",
+              "upgrades": ["`80%`","`88%`","`96%`","`104%`","`110%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/axe-whirl-281x300.webp"
+            },
+            {
+              "name": "Razor Sharp",
+              "description": "Forrest’s sharpened axe deals `30%` more damage per second.",
+              "upgrades": ["`10%`","`15%`","`20%`","`25%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/razor-sharp-296x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+90.07%",
+          "Defense": "+90.07%",
+          "skills": [
+            {
+              "name": "Woodland Inheritor",
+              "description": "Forrest’s expert lumberjack skills increase the Town’s Sawmill Output by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/woodland-inheritor-290x300.webp"
+            },
+            {
+              "name": "Master Woodcutter",
+              "description": "Forrest utilizes his logging expertise, increasing Wood Gathering Speed in the Wilderness by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/07/master-woodcutter-297x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "example": {
+      "name": "",
+      "class": "",
+      "type": "",
+      "description": "",
+      "generation": null,
+      "image": "",
+      "sources": [""],
+      "skills": {
+        "gear": {
+          "image": "",
+          "HeroPower": 0,
+          "HeroAttack": 0,
+          "HeroDefense": 0,
+          "HeroHealth": 0,
+          "EscortAttack": 0,
+          "EscortDefense": 0,
+          "EscortHealth": 0,
+          "TroopLethality": "+0%",
+          "TroopHealth": "+0%",
+          "skills": [
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`30%`", "`40%`", "`50%`", "`60%`", "`70%`"],
+              "image": ""
+            },
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": ""
+            }
+
+          ]
+        },
+        "conquest": {
+          "Attack": 0,
+          "Defense": 0,
+          "Health": 0,
+          "skills": [
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`0%`","`0%`","`0%`","`0%`","`0%`"],
+              "image": ""
+            },
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`0%`","`0%`","`0%`","`0%`","`0%`"],
+              "image": ""
+            },
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`0%`","`0%`","`0%`","`0%`","`0%`"],
+              "image": ""
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+0%",
+          "Defense": "+0%",
+          "skills": [
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`0%`","`0%`","`0%`","`0%`","`0%`"],
+              "image": ""
+            },
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`0%`","`0%`","`0%`","`0%`","`0%`"],
+              "image": ""
+            },
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`0%`","`0%`","`0%`","`0%`","`0%`"],
+              "image": ""
+            }
+          ]
+        }
+      }
+    }
+  }
+]
