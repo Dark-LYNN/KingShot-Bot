@@ -1,5 +1,5 @@
 import db from "@/database";
-import { upsertUser } from "@/database/functions";
+import { fetchUser, upsertUser } from "@/database/functions";
 import { ExtendedClient } from "@/types/extendedClient";
 import { makeSign } from "@/utils/api";
 import Database from "better-sqlite3";
@@ -29,11 +29,7 @@ export async function accountDisconnect(
   try {
     const user = interaction.user;
 
-    const userInfo = await db
-      .selectFrom('users')
-      .where('user_id', '=', user.id)
-      .selectAll()
-      .executeTakeFirst();
+    const userInfo = await fetchUser(user.id)
     
     if (!userInfo) {
       await interaction.editReply({ content: ':x: You don\'t seem to have an account linked. Please link a account with </account link:1408600312851333191> ' });

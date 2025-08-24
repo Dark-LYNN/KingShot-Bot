@@ -1,4 +1,5 @@
 import db from "@/database";
+import { fetchUser } from "@/database/functions";
 import { ExtendedClient } from "@/types/extendedClient";
 import { ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
 
@@ -24,11 +25,7 @@ export async function accountView(
   try {
     const user = interaction.user;
 
-    const userInfo = await db
-      .selectFrom('users')
-      .where('user_id', '=', user.id)
-      .selectAll()
-      .executeTakeFirst();
+    const userInfo = await fetchUser(user.id)
     
     if (!userInfo) {
       await interaction.editReply({ content: ':x: You don\'t seem to have an account linked. Please link a account with </account link:1408600312851333191> ' });

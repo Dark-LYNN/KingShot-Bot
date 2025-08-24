@@ -1,5 +1,7 @@
 import { ApiResponse } from "@/commands/kingshot/_accountLink";
 import { db } from ".";
+import { promises } from "dns";
+import { UserTable } from "./db.types";
 
 const now = Date.now();
 
@@ -27,4 +29,14 @@ export async function upsertUser(discordId: string, apiData: ApiResponse["data"]
       })
     )
     .execute();
+}
+
+export async function fetchUser(discordId: string) {
+  const result = await db
+    .selectFrom('users')
+    .where('user_id', '=', discordId)
+    .selectAll()
+    .executeTakeFirst();
+
+  return result;
 }

@@ -3,6 +3,7 @@ import { ApplicationIntegrationType, ChatInputCommandInteraction, EmbedBuilder, 
 import { ExtendedClient } from '../../types/extendedClient';
 import db from '@/database';
 import { makeSign } from '@/utils/api';
+import { fetchUser } from '@/database/functions';
 
 type ApiResponse = {
   code: 1,           // code = 1 already claimed 0 = success
@@ -30,11 +31,7 @@ export default {
     await interaction.deferReply({ flags:"Ephemeral" })
 
     const user = interaction.user;
-    const userInfo = await db
-      .selectFrom('users')
-      .where('user_id', '=', user.id)
-      .selectAll()
-      .executeTakeFirst();
+    const userInfo = await fetchUser(user.id)
     
     if (!userInfo) {
       await interaction.editReply({ content: ':x: You don\'t seem to have an account linked. Please link a account with </account link:1408600312851333191> ' });
@@ -91,34 +88,35 @@ export default {
   }
 }
 
-async function redeemCode(fid: number, code: string, sign: string, currentTime: number) {
+async function redeemCode(fid: number, code: string) {
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  // get rum_device_id
-  await page.goto('https://ks-giftcode.centurygame.com/');
+  // Go to the gift code site
+  await page.goto('https://ks-giftcode.centurygame.com/', { waitUntil: 'networkidle' });
 
-  // take rum_device_id from localStorage
-  const rumDeviceId = await page.evaluate(() => localStorage.getItem('rum_device_id'));
+  // Fill in Player ID
+  await page.fill('input[placeholder="Player ID"]', fid.toString());
 
-  if (!rumDeviceId) {
-    await browser.close();
-    throw new Error('Failed to get rum_device_id');
-  }
+  // Click Login
+  await page.click('.login_btn');
+  await page.waitForTimeout(2000); // wait for login to process (adjust as needed)
 
-  // make POST req from browser
-  const result = await page.evaluate(
-    async ({ fid, code, sign, time }) => {
-      const res = await fetch('https://kingshot-giftcode.centurygame.com/api/gift_code', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `fid=${fid}&cdk=${code}&sign=${sign}&captcha_code=&time=${time}`
-      });
-      return res.json();
-    },
-    { fid, code, sign, time: currentTime }
-  );
+  // Fill in Gift Code
+  await page.fill('input[placeholder="Enter Gift Code"]', code);
+
+  // Click Confirm
+  await page.click('.exchange_btn');
+
+  // Wait for response or success message
+  await page.waitForTimeout(3000); // adjust depending on how long the site takes
+
+  // You can check for success/error messages on the page
+  const result = await page.evaluate(() => {
+    const el = document.querySelector('.tips') || document.body;
+    return el?.textContent?.trim() || 'No message found';
+  });
 
   await browser.close();
   return result;
