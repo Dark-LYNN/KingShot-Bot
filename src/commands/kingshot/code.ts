@@ -78,7 +78,7 @@ async function redeemCode(fid: string, code: string) {
     await page.goto('https://ks-giftcode.centurygame.com/', { waitUntil: 'networkidle' });
 
     // Step 1: enter Player ID
-    const fidStr = fid.toString();
+    const fidStr = fid
     const playerInput = page.locator('input[placeholder="Player ID"]');
 
     // Set value and dispatch input event so site detects it
