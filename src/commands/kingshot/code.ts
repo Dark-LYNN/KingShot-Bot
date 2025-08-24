@@ -73,46 +73,50 @@ export default {
 
 async function redeemCode(fid: number, code: string) {
   const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext();
-  const page = await context.newPage();
+  const page = await browser.newPage();
 
-  await page.goto('https://ks-giftcode.centurygame.com/', { waitUntil: 'networkidle' });
+  try {
+    await page.goto('https://ks-giftcode.centurygame.com/', { waitUntil: 'networkidle' });
 
-  // Step 1: enter Player ID
-  const playerInput = page.locator('input[placeholder="Player ID"]');
-  await playerInput.fill(fid.toString());
-  
-  // Step 2: wait for login button to be enabled and click it
-  const loginBtn = page.locator('.login_btn:not(.disabled)');
-  await loginBtn.waitFor({ state: 'visible' });
-  await loginBtn.click();
-  
-  // Step 3: Wait for character avatar to appear
-  const characterAvatar = page.locator('img.img.avatar');
-  await characterAvatar.waitFor({ state: 'visible', timeout: 15000 });
+    // Step 1: enter Player ID
+    const playerInput = page.locator('input[placeholder="Player ID"]');
+    await playerInput.fill(fid.toString());
 
-  // Step 4: wait for gift code input
-  const codeInput = page.locator('input[placeholder="Enter Gift Code"]');
-  await page.waitForFunction(
-    (selector) => {
-      const el = document.querySelector<HTMLInputElement>(selector);
-      return el && !el.disabled;
-    },
-    'input[placeholder="Enter Gift Code"]',
-    { timeout: 20000 }
-  );
-  await codeInput.fill(code);
-  await codeInput.waitFor({ state: 'visible' });
-    
-  // Step 6: click exchange button (force to bypass .disabled)
-  const exchangeBtn = page.locator('.exchange_btn');
-  await exchangeBtn.click({ force: true });
+    // Step 2: wait for login button to be enabled and click it
+    const loginBtn = page.locator('.login_btn:not(.disabled)');
+    await loginBtn.waitFor({ state: 'visible', timeout: 15000 });
+    await loginBtn.click();
 
-  // Step 7: wait for modal message
-  const modalMsg = page.locator('.modal_content .msg');
-  await modalMsg.waitFor({ state: 'visible', timeout: 15000 });
-  const message = await modalMsg.textContent();
-  
-  await browser.close();
-  return message;
+    // Optional: wait for avatar as sanity check
+    const avatar = page.locator('img.img.avatar');
+    await avatar.waitFor({ state: 'visible', timeout: 15000 });
+
+    // Step 3: wait for gift code input to be enabled
+    const codeInput = page.locator('input[placeholder="Enter Gift Code"]');
+    await codeInput.waitFor({ state: 'visible', timeout: 20000 });
+
+    // Step 4: fill gift code
+    await page.waitForFunction(
+      (selector) => {
+        const el = document.querySelector<HTMLInputElement>(selector);
+        return el && !el.disabled;
+      },
+      'input[placeholder="Enter Gift Code"]',
+      { timeout: 20000 }
+    );    
+    await codeInput.fill(code);
+
+    // Step 5: click exchange button
+    const exchangeBtn = page.locator('.exchange_btn');
+    await exchangeBtn.click({ force: true });
+
+    // Step 6: wait for modal message
+    const modalMsg = page.locator('.modal_content .msg');
+    await modalMsg.waitFor({ state: 'visible', timeout: 15000 });
+    const message = await modalMsg.textContent();
+
+    return message?.trim() || 'No message found';
+  } finally {
+    await browser.close();
+  }
 }
