@@ -87,6 +87,8 @@ async function redeemCode(fid: number, code: string) {
     await loginBtn.waitFor({ state: 'visible', timeout: 15000 });
     await loginBtn.click();
 
+    await page.waitForTimeout(1000);
+
     // Step 3: wait for gift code input to be enabled
     const codeInput = page.locator('input[placeholder="Enter Gift Code"]');
     await codeInput.waitFor({ state: 'visible', timeout: 20000 });
@@ -102,6 +104,8 @@ async function redeemCode(fid: number, code: string) {
     );    
     await codeInput.fill(code);
 
+    await page.waitForTimeout(1000);
+    
     // Step 5: click exchange button
     const exchangeBtn = page.locator('.exchange_btn');
     await exchangeBtn.click({ force: true });
