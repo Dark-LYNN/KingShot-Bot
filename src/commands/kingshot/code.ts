@@ -92,6 +92,9 @@ async function redeemCode(fid: number, code: string) {
     // Optional: also fill normally to mimic typing
     await playerInput.fill(fidStr);
 
+    const currentValue = await playerInput.evaluate((el) => (el as HTMLInputElement).value);
+    console.log('Player ID input value before login:', currentValue);
+
     // Step 2: wait for login button to be enabled and click it
     const loginBtn = page.locator('.login_btn:not(.disabled)');
     await loginBtn.waitFor({ state: 'visible', timeout: 15000 });
