@@ -79,28 +79,31 @@ async function redeemCode(fid: number, code: string) {
   await page.goto('https://ks-giftcode.centurygame.com/', { waitUntil: 'networkidle' });
 
   // Step 1: enter Player ID
-  await page.fill('input[placeholder="Player ID"]', fid.toString());
+  const playerInput = page.locator('input[placeholder="Player ID"]');
+  await playerInput.fill(fid.toString());
   
   // Step 2: wait for login button to be enabled and click it
-  await page.waitForSelector('.login_btn:not(.disabled)');
-  await page.click('.login_btn');
+  const loginBtn = page.locator('.login_btn:not(.disabled)');
+  await loginBtn.waitFor({ state: 'visible' });
+  await loginBtn.click();
   
-  // Step 3: wait for gift code input to appear (after login)
-  await page.waitForSelector('input[placeholder="Enter Gift Code"]:not([disabled])');
+  // Step 3: wait for gift code input
+  const codeInput = page.locator('input[placeholder="Enter Gift Code"]:not([disabled])');
+  await codeInput.waitFor({ state: 'visible' });
   
-  // Step 4: enter the gift code
-  await page.fill('input[placeholder="Enter Gift Code"]', code);
+  // Step 4: type the gift code
+  await codeInput.fill(code);
   
   // Step 5: wait for exchange button to become enabled
-  await page.waitForSelector('.exchange_btn:not(.disabled)');
+  const exchangeBtn = page.locator('.exchange_btn:not(.disabled)');
+  await exchangeBtn.waitFor({ state: 'visible' });
+  await exchangeBtn.click();
   
-  // Step 6: click exchange button
-  await page.click('.exchange_btn:not(.disabled)');
+  // Step 6: wait for modal and grab message
+  const modalMsg = page.locator('.modal_content .msg');
+  await modalMsg.waitFor({ state: 'visible' });
+  const message = await modalMsg.textContent();
   
-  // Step 7: wait for modal and grab message
-  await page.waitForSelector('.modal_content .msg');
-  const message = await page.$eval('.modal_content .msg', el => el.textContent?.trim() || '');
-
   await browser.close();
   return message;
 }
