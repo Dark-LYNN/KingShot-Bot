@@ -79,21 +79,29 @@ async function redeemCode(fid: number, code: string) {
     await page.goto('https://ks-giftcode.centurygame.com/', { waitUntil: 'networkidle' });
 
     // Step 1: enter Player ID
+    const fidStr = fid.toString();
     const playerInput = page.locator('input[placeholder="Player ID"]');
-    await playerInput.fill(`${fid}`);
+
+    // Set value and dispatch input event so site detects it
+    await playerInput.evaluate((el, val) => {
+      const input = el as HTMLInputElement;
+      input.value = val;
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    }, fidStr);
+
+    // Optional: also fill normally to mimic typing
+    await playerInput.fill(fidStr);
 
     // Step 2: wait for login button to be enabled and click it
     const loginBtn = page.locator('.login_btn:not(.disabled)');
     await loginBtn.waitFor({ state: 'visible', timeout: 15000 });
     await loginBtn.click();
 
+    // Wait a bit for server to process login
     await page.waitForTimeout(1000);
 
     // Step 3: wait for gift code input to be enabled
     const codeInput = page.locator('input[placeholder="Enter Gift Code"]');
-    await codeInput.waitFor({ state: 'visible', timeout: 20000 });
-
-    // Step 4: fill gift code
     await page.waitForFunction(
       (selector) => {
         const el = document.querySelector<HTMLInputElement>(selector);
@@ -102,10 +110,12 @@ async function redeemCode(fid: number, code: string) {
       'input[placeholder="Enter Gift Code"]',
       { timeout: 20000 }
     );    
+
+    // Step 4: fill gift code
     await codeInput.fill(code);
 
     await page.waitForTimeout(1000);
-    
+
     // Step 5: click exchange button
     const exchangeBtn = page.locator('.exchange_btn');
     await exchangeBtn.click({ force: true });
@@ -115,6 +125,7 @@ async function redeemCode(fid: number, code: string) {
     await modalMsg.waitFor({ state: 'visible', timeout: 15000 });
     const message = await modalMsg.textContent();
 
+    // Step 7: log localStorage
     const localStorageData = await page.evaluate(() => {
       const data: Record<string, string> = {};
       for (let i = 0; i < localStorage.length; i++) {
@@ -123,9 +134,9 @@ async function redeemCode(fid: number, code: string) {
       }
       return data;
     });
-    
+
     console.log('LocalStorage:', localStorageData);
-    
+
     return message?.trim() || 'No message found';
     
   } finally {
