@@ -51,25 +51,7 @@ export default {
     });
     const data = `sign=${sign}&fid=${fid}&cdk=${code}&captcha_code=&time=${currentTime}`;
 
-    const json = await redeemCode(fid, code, sign, currentTime);
-
-    if (json.err_code == 40007) {
-      await interaction.editReply({ content: ":x: This code seems to be expired." })
-      return;
-    } else if (json.err_code == 40014) {
-      await interaction.editReply({ content: ":x: This code seems to be invalid." })
-      return;
-    } else if (json.err_code == 40011) {
-      await interaction.editReply({ content: ":x: This code seems to be already claimed on another Character on same user account." })
-      return;
-    } else if (json.err_code == 40008 ) {
-      await interaction.editReply({ content: ":x: This code seems to be already claimed." })
-      return;
-    } else if (json.err_code != 20000) {
-      await interaction.editReply({ content: ":x: Something seems wrong. We got error code: " + json.err_code })
-      console.log('Message:'+ json.msg + '\n' + 'code:' + json.code + '\n' + 'Err Code:' + json.err_code + '\n' + 'Data:' + json.data )
-      return;
-    }
+    const json = await redeemCode(fid, code);
 
     const embed = new EmbedBuilder()
       .setTitle('Code Redeemed')
@@ -101,7 +83,9 @@ async function redeemCode(fid: number, code: string) {
 
   // Click Login
   await page.click('.login_btn');
-  await page.waitForTimeout(2000); // wait for login to process (adjust as needed)
+
+  // Wait for login to succeed (you may need to tweak this wait condition)
+  await page.waitForTimeout(2000);
 
   // Fill in Gift Code
   await page.fill('input[placeholder="Enter Gift Code"]', code);
@@ -109,15 +93,12 @@ async function redeemCode(fid: number, code: string) {
   // Click Confirm
   await page.click('.exchange_btn');
 
-  // Wait for response or success message
-  await page.waitForTimeout(3000); // adjust depending on how long the site takes
+  // Wait for modal with result to appear
+  await page.waitForSelector('.modal_content .msg', { timeout: 10000 });
 
-  // You can check for success/error messages on the page
-  const result = await page.evaluate(() => {
-    const el = document.querySelector('.tips') || document.body;
-    return el?.textContent?.trim() || 'No message found';
-  });
+  // Extract the message text
+  const message = await page.$eval('.modal_content .msg', el => el.textContent?.trim() || '');
 
   await browser.close();
-  return result;
+  return message;
 }
