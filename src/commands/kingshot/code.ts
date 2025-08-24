@@ -39,29 +39,28 @@ export default {
     };
 
     const fid = userInfo.fid.toString()
-    const currentTime = Date.now();
     const code = interaction.options.getString('code')?.toUpperCase()
-    const captcha = ""
     if (!code) { await interaction.editReply({ content: ':x: Code not found.' }); return; }
-    const sign = makeSign({
-      fid,
-      cdk: code,
-      captcha_code: captcha,
-      time: currentTime
-    });
-    const data = `sign=${fid}&fid=${userInfo.fid}&cdk=${code}&captcha_code=&time=${currentTime}`;
 
     const message = await redeemCode(fid, code);
-    console.log(message)
-
     const embed = new EmbedBuilder()
-      .setTitle('Code Redeemed')
-      .setColor(parseInt('#FFEB3B'.replace(/^#/, ''), 16))
-      .setDescription(
-        'The gift-code **' + code + '** has been redeemed on ' + userInfo.username + ' from #' + userInfo.state + '\n' +
-        '**Rewards will be directly sent to Character’s mail after redemption*'
-      )
       .setFooter({ text: 'Made with ❤️ by Lynnux' });
+
+
+    if (message === "Redeemed, please claim the rewards in your mail!") {
+      embed
+        .setTitle('Code Redeemed')
+        .setColor(parseInt('#FFEB3B'.replace(/^#/, ''), 16))
+        .setDescription(
+          'The gift-code **' + code + '** has been redeemed on ' + userInfo.username + ' from #' + userInfo.state + '\n' +
+          '-# *Rewards will be directly sent to Character’s mail after redemption'
+        )
+    } else {
+      embed
+        .setColor(parseInt('#FFEB3B'.replace(/^#/, ''), 16))
+        .setTitle('Code Couldn\'t be redeemed')
+        .setDescription(message)
+    }
     
     if (userInfo.avatar_url) {
       embed.setThumbnail(userInfo.avatar_url)
@@ -93,7 +92,6 @@ async function redeemCode(fid: string, code: string) {
     await playerInput.fill(fidStr);
 
     const currentValue = await playerInput.evaluate((el) => (el as HTMLInputElement).value);
-    console.log('Player ID input value before login:', currentValue);
 
     // Step 2: wait for login button to be enabled and click it
     const loginBtn = page.locator('.login_btn:not(.disabled)');
@@ -137,8 +135,6 @@ async function redeemCode(fid: string, code: string) {
       }
       return data;
     });
-
-    console.log('LocalStorage:', localStorageData);
 
     return message?.trim() || 'No message found';
     
