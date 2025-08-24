@@ -111,7 +111,19 @@ async function redeemCode(fid: number, code: string) {
     await modalMsg.waitFor({ state: 'visible', timeout: 15000 });
     const message = await modalMsg.textContent();
 
+    const localStorageData = await page.evaluate(() => {
+      const data: Record<string, string> = {};
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key) data[key] = localStorage.getItem(key) as string;
+      }
+      return data;
+    });
+    
+    console.log('LocalStorage:', localStorageData);
+    
     return message?.trim() || 'No message found';
+    
   } finally {
     await browser.close();
   }
