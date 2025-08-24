@@ -57,7 +57,7 @@ export default {
         )
     } else {
       embed
-        .setColor(parseInt('#FFEB3B'.replace(/^#/, ''), 16))
+        .setColor(parseInt('#FF3333'.replace(/^#/, ''), 16))
         .setTitle('Code Couldn\'t be redeemed')
         .setDescription(message)
     }
