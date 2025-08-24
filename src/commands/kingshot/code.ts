@@ -38,7 +38,7 @@ export default {
       return;
     };
 
-    const fid = parseInt(interaction.options.getString('id') ?? '0', 10);
+    const fid = userInfo.fid.toString()
     const currentTime = Date.now();
     const code = interaction.options.getString('code')?.toUpperCase()
     const captcha = ""
@@ -49,7 +49,7 @@ export default {
       captcha_code: captcha,
       time: currentTime
     });
-    const data = `sign=${sign}&fid=${fid}&cdk=${code}&captcha_code=&time=${currentTime}`;
+    const data = `sign=${fid}&fid=${userInfo.fid}&cdk=${code}&captcha_code=&time=${currentTime}`;
 
     const message = await redeemCode(fid, code);
     console.log(message)
@@ -71,7 +71,7 @@ export default {
   }
 }
 
-async function redeemCode(fid: number, code: string) {
+async function redeemCode(fid: string, code: string) {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
