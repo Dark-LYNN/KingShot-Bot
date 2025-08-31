@@ -1,8 +1,6 @@
 import { chromium } from 'playwright';
 import { ApplicationIntegrationType, ChatInputCommandInteraction, EmbedBuilder, InteractionContextType, SlashCommandBuilder } from 'discord.js';
 import { ExtendedClient } from '../../types/extendedClient';
-import db from '@/database';
-import { makeSign } from '@/utils/api';
 import { fetchUser } from '@/database/functions';
 
 type ApiResponse = {

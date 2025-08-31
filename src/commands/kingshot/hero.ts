@@ -1,6 +1,5 @@
 import { ApplicationIntegrationType, ChatInputCommandInteraction, InteractionContextType, SlashCommandBuilder } from 'discord.js';
 import { ExtendedClient } from '../../types/extendedClient';
-import { logger } from '../../utils';
 import { heroInfo } from './_HeroInfo';
 import fs from "fs";
 import path from "path";

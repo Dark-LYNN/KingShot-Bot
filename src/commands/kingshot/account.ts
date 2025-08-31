@@ -1,6 +1,5 @@
 import { ApplicationIntegrationType, ChatInputCommandInteraction, InteractionContextType, SlashCommandBuilder } from 'discord.js';
 import { ExtendedClient } from '../../types/extendedClient';
-import { heroInfo } from './_HeroInfo';
 import { accountLink } from './_accountLink';
 import { accountView } from './_accountView';
 import { accountDisconnect } from './_accountDisconnect';

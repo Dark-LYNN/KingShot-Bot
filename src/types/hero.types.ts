@@ -41,5 +41,22 @@ export interface Hero {
   };
 }
 
+export interface Pet {
+  name: string;
+  generation: number;
+  description: string;
+  icon: string;
+  skill: {
+    title: string;
+    description: string;
+    upgrades: string[];
+    extra?: {
+      rewards: string[];
+    }
+  }
+}
+
 export type HeroEntry = Record<string, Hero>;  // { "jaeger": Hero }
 export type HeroesFile = HeroEntry[];          // [ { "jaeger": Hero }, { "helga": Hero } ]
+export type petEntry = Record<string, Pet>     // { "lynx": Pet }
+export type petsFile = petEntry[];             // [ { "lynx": Pet }, { "moose": Pet } ]
