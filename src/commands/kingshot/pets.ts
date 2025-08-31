@@ -59,7 +59,9 @@ export default {
         .setTitle(`${pet.name} (Gen ${pet.generation})`)
         .setThumbnail(pet.icon)
         .setDescription(pet.description)
-        .addFields({ name: `🐾 ${pet.skill.title}`, value: pet.skill.description });
+        .setColor(parseInt('#FFEB3B'.replace(/^#/, ''), 16))
+        .addFields({ name: `🐾 ${pet.skill.title}`, value: pet.skill.description })
+        .setFooter({text: 'Made with ❤️ by Lynnux'});
 
       if (pet.skill.upgrades?.length) {
         embed.addFields({
