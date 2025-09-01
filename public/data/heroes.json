@@ -1,5 +1,272 @@
 [
   {
+    "rosa": {
+      "name": "Rosa",
+      "class": "Archer",
+      "type": "SSR",
+      "description": "Rosa is a Mythic-quality Generation 4 hero in Kingshot, classified under the Archer class. You can unlock her through the Hero Roulette and Swordland Showdown Shop.",
+      "generation": 4,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/09/rosa-avatar-image-300x300.webp",
+      "sources": ["Hero Roulette", "Swordland Shop"],
+      "skills": {
+        "gear": {
+          "image": "",
+          "HeroPower": 0,
+          "HeroAttack": 0,
+          "HeroDefense": 0,
+          "HeroHealth": 0,
+          "EscortAttack": 0,
+          "EscortDefense": 0,
+          "EscortHealth": 0,
+          "TroopLethality": "+0%",
+          "TroopHealth": "+0%",
+          "skills": [
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`30%`", "`40%`", "`50%`", "`60%`", "`70%`"],
+              "image": ""
+            },
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": ""
+            }
+
+          ]
+        },
+        "conquest": {
+          "Attack": 4989,
+          "Defense": 4106,
+          "Health": 30802,
+          "skills": [
+            {
+              "name": "Battle Focus",
+              "description": "A voluptuous figure, Rosa is used to drawing battlefield attention. Rosa clears all debuffs (control effects, etc.) for all squads and increases their Attack by `7%` for `5s`, during which they remain immune to debuffs.",
+              "upgrades": ["`3% ~ 3s`","`4% ~ 3.5s`","`5% ~ 4s`","`6% ~ 4.5s`","`7% ~ 5s`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/battle-focus-281x300.webp"
+            },
+            {
+              "name": "Flutterfang",
+              "description": "Rosa spins her fan blade out with dazzling ferocity, dealing Attack * `300%` damage to enemies in its path.",
+              "upgrades": ["`220%`","`240%`","`260%`","`280%`","`300%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/flutterfang-289x300.webp"
+            },
+            {
+              "name": "Swoon Chakra",
+              "description": "Rosa’s dancing is a wonderful distraction from the tyranny of the battlefield, reducing Attack Speed by `3%` and healing effects by `60%` for all enemy squads.",
+              "upgrades": ["`1% ~ 40%`","`1.5% ~ 45%`","`2% ~ 50%`","`2.5% ~ 55%`","`3% ~ 60%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/swoon-chakra-300x293.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+370.29%",
+          "Defense": "+370.29%",
+          "skills": [
+            {
+              "name": "Chaos Gambit",
+              "description": "Well-placed chaos is prologue to success. Rosa grants a 40% chance of increasing all Squads’ Damage Dealt by `50%`.",
+              "upgrades": ["`10%`","`20%`","`30%`","`40%`","`50%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/chaos-gambit-285x300.webp"
+            },
+            {
+              "name": "Rose of War",
+              "description": "No soldier wishes to harm this wild rose of war, reducing damage dealt by `20%` for all enemy squads.",
+              "upgrades": ["`4%`","`8%`","`12%`","`16%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/rose-of-war-284x300.webp"
+            },
+            {
+              "name": "Golden Rhythm",
+              "description": "A dance of distraction is the perfect complement to archer fire, increasing Archers’ total Attack by `30%`.",
+              "upgrades": ["`6%`","`12%`","`18%`","`24%`","`30%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/golden-rhythm-293x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "alcar": {
+      "name": "Alcar",
+      "class": "Infantry",
+      "type": "SSR",
+      "description": "Alcar is a Mythic-quality Generation 4 Hero in Kingshot, classified under the Infantry class. You can unlock him through the Hero Rally, Daily Deals, Strongest Governor, and Kingdom of Power event.",
+      "generation": 4,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/08/alcar-avatar-image-296x300.webp",
+      "sources": ["Hero Rally", "Daily Deals", "Strongest Governor Event", "Kingdom of Power Event", "Swordland Shop"],
+      "skills": {
+        "gear": {
+          "image": "https://kingshotdata.com/wp-content/uploads/2025/08/praetorian-guard-300x273.webp",
+          "HeroPower": 416250,
+          "HeroAttack": 638,
+          "HeroDefense": 832,
+          "HeroHealth": 12487,
+          "EscortAttack": 212,
+          "EscortDefense": 277,
+          "EscortHealth": 4162,
+          "TroopLethality": "+92.50%",
+          "TroopHealth": "+92.50%",
+          "skills": [
+            {
+              "name": "Flagbearer – Conquest Skill",
+              "description": "Glory is best shared. ‘Glorious Mark’ increases friendly Squads’ Attack by `42%` for 2.5s.",
+              "upgrades": ["`30%`", "`33%`", "`36%`", "`39%`", "`42%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/08/flagbearer-289x300.webp"
+            },
+            {
+              "name": "Vow of Honor – Expedition Skill",
+              "description": "There is power in the steadfast vow. Alcar increases Defender Squads’ Health by `15%`.",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/08/vow-of-honor-150x150.webp"
+            }
+          ]
+        },
+        "conquest": {
+          "Attack": 3150,
+          "Defense": 4106,
+          "Health": 61604,
+          "skills": [
+            {
+              "name": "Glorious Mark",
+              "description": "A Praetorian’s glory is his strength. Alcar enters an invulnerable state (unable to move or cast skills, immune to control effects) and reduces Damage Taken by `70%` for nearby friendly squads for 2s.",
+              "upgrades": ["`30%`","`40%`","`50%`","`60%`","`70%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/08/glorious-mark-294x300.png"
+            },
+            {
+              "name": "Boneshatter",
+              "description": "Alcar spears a line of enemies, dealing Attack * 98% damage and increases the Damage Taken for enemies hit by 20% for 2s.",
+              "upgrades": ["`70%`","`77%`","`84%`","`91%`","`98%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/08/boneshatter-288x300.webp"
+            },
+            {
+              "name": "Second Wind",
+              "description": "Alcar’s loyalty to the old ways gives him strength. “Glorious Mark” restores Attack * `42%` Health every second for 5s.",
+              "upgrades": ["`30%`","`33%`","`36%`","`39%`","`42%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/08/second-wind-290x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+370.29%",
+          "Defense": "+370.29%",
+          "skills": [
+            {
+              "name": "Rescuing Hands",
+              "description": "Alcar’s utter dedication to keeping his men safe is well-proved. Reduces Infantry and Archer’s Damage Taken by `70%` every 5 turns for 2 turns.",
+              "upgrades": ["`14%`","`28%`","`42%`","`56%`","`70%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/08/rescuing-hands-288x300.webp"
+            },
+            {
+              "name": "Praetorian Will",
+              "description": "The fighting belligerence of a Praetorian is something for others to study. Increases Infantry Damage Dealt by `100%` and Cavalry and Archer’s Damage Dealt by `10%`.",
+              "upgrades": ["`20% ~ 2%`","`40% ~ 4%`","`60% ~ 6%`","`80% ~ 8%`","`100% ~ 10%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/08/praetorian-will-287x300.webp"
+            },
+            {
+              "name": "Capre Diem",
+              "description": "Years of training have taught Alcar how to exploit enemy weakness, increasing Infantry Damage Dealt per attack by `60%` and target Damage Taken by `25%` for 1 turn.",
+              "upgrades": ["`12% ~ 5%`","`24% ~ 10%`","`36% ~ 15%`","`48% ~ 20%`","`60% ~ 25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/08/capre-diem-294x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "margot": {
+      "name": "Margot",
+      "class": "Cavalry",
+      "type": "SSR",
+      "description": "Margot is a Mythic-quality Generation 4 Hero in Kingshot, classified under the Cavalry class. You can unlock her through the Hall of Heroes and Swordland Showdown Shop.",
+      "generation": 4,
+      "image": "https://kingshotdata.com/wp-content/uploads/2025/09/margot-avatar.webp",
+      "sources": ["Hall of Heroes", "Swordland Shop"],
+      "skills": {
+        "gear": {
+          "image": "",
+          "HeroPower": 0,
+          "HeroAttack": 0,
+          "HeroDefense": 0,
+          "HeroHealth": 0,
+          "EscortAttack": 0,
+          "EscortDefense": 0,
+          "EscortHealth": 0,
+          "TroopLethality": "+0%",
+          "TroopHealth": "+0%",
+          "skills": [
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`30%`", "`40%`", "`50%`", "`60%`", "`70%`"],
+              "image": ""
+            },
+            {
+              "name": "",
+              "description": "",
+              "upgrades": ["`5%`", "`7.5%`", "`10%`", "`12.5%`", "`15%`"],
+              "image": ""
+            }
+
+          ]
+        },
+        "conquest": {
+          "Attack": 4106,
+          "Defense": 4106,
+          "Health": 4106,
+          "skills": [
+            {
+              "name": "Ambush",
+              "description": "Margot ambushes an enemy with bombs, dealing Attack * `420%` Area of Effect damage.",
+              "upgrades": ["`300%`","`330%`","`360%`","`390%`","`420%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/ambush-287x300.webp"
+            },
+            {
+              "name": "Parry",
+              "description": "Swords can be used offensively and defensively. Margot has `25%` chance of parrying, avoiding all damage from enemy attacks.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/parry-284x300.webp"
+            },
+            {
+              "name": "Stiletto",
+              "description": "Margot head-gouges the enemy (heroes first), dealing Attack * `140%` damage and immobilizing them for 1.5s.",
+              "upgrades": ["`100%`","`110%`","`120%`","`130%`","`140%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/stiletto-290x300.webp"
+            }
+          ]
+        },
+        "expedition": {
+          "Attack": "+370.29%",
+          "Defense": "+370.29%",
+          "skills": [
+            {
+              "name": "Warbringer",
+              "description": "Margot’s focus on armor-penetration increases total Squads’ Attack by `25%`.",
+              "upgrades": ["`5%`","`10%`","`15%`","`20%`","`25%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/warbringer-282x300.webp"
+            },
+            {
+              "name": "Subterfuge",
+              "description": "Within Margot’s haphazard positioning lies careful strategy. Her presents grants all Squads a `20%` chance of dodging Normal Attacks.",
+              "upgrades": ["`4%`","`8%`","`12%`","`16%`","`20%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/subterfuge-285x300.webp"
+            },
+            {
+              "name": "Sleight Hand",
+              "description": "Margot’s Cavalry have a 25% chance of performing an extra attack, dealing `200%` damage.",
+              "upgrades": ["`120%`","`140%`","`160%`","`180%`","`200%`"],
+              "image": "https://kingshotdata.com/wp-content/uploads/2025/09/sleight-hand-296x300.webp"
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
     "jaeger": {
       "name": "Jaeger",
       "class": "Archer",
@@ -266,7 +533,6 @@
       }
     }
   },
-
   {
     "hilde": {
       "name": "Hilde",
@@ -1440,7 +1706,6 @@
       }
     }
   },
-
   {
     "seth": {
       "name": "Seth",
