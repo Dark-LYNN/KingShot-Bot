@@ -29,7 +29,7 @@ export async function heroInfo(
     .setDescription(
       '**Description:** ' + hero.description + '\n\n' +
       '**Class:** ' + ((hero.class === 'archer') ? '🏹' : ((hero.class === 'cavalry') ? '🐴': '⚔️')) + ` ${hero.class}` + '\n' +
-      '**Generation:** ' + ((hero.generation === 3) ? '3️⃣' : ((hero.generation === 2) ? '2️⃣' : '1️⃣' )) + '\n' +
+      '**Generation:** ' + ((hero.generation === 2) ? '2️⃣' : ((hero.generation === 3) ? '3️⃣' : ((hero.generation === 4) ? '4️⃣' : '1️⃣'))) + '\n' +
       '**Obtained trough:** \n`' + hero.sources.join("`, `") + '`'
     )
     .setFooter({ text: "Made with ❤️ by Lynnux" });
