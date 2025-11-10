@@ -1,6 +1,6 @@
 import { fetchUserV2 } from "@/database/functions";
 import { ExtendedClient } from "@/types/extendedClient";
-import { getTierEmoji } from "@/utils/kingshot";
+import { getTierEmoji, trueGoldTiers } from "@/utils/kingshot";
 import { ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
 
 // This type isn't used directly.
@@ -35,15 +35,16 @@ export async function accountView(
       return;
     }
 
-    const emote = getTierEmoji(userInfo.level, client) ?? null;
-    const levelEmote = (emote) ? ' ' + emote : '';
+    const tier = trueGoldTiers.find(t => userInfo.level >= t.min && userInfo.level <= t.max);
+    const emote = tier ? client.emoji(tier.emoji) : '';
+    const levelEmote = emote ? ' ' + emote : '';
     const embed = new EmbedBuilder()
       .setTitle(`${interaction.user.displayName}'s Linked account`)
       .setColor(parseInt("#FFEB3B".replace(/^#/, ""), 16))
       .setDescription(
         "**Username:**  " + userInfo.username + "\n" +
         "**Kingdom:**  " + userInfo.kingdom + "\n" +
-        "**TC Level:**  " + userInfo.level + levelEmote + "\n" +
+        "**TC Level:**  " + userInfo.level + levelEmote + ` (${tier})` + "\n" +
         "**User ID:**  " + userInfo.player_id
       )
       .setFooter({ text: "Made with ❤️ by Lynnux" });

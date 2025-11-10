@@ -3,7 +3,7 @@ import { ExtendedClient } from "@/types/extendedClient";
 import { ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
 import { ApiResponse } from "@/types/api";
 import https from "https";
-import { getTierEmoji } from "@/utils/kingshot";
+import { getTierEmoji, trueGoldTiers } from "@/utils/kingshot";
 export async function accountLink(
   client: ExtendedClient,
   interaction: ChatInputCommandInteraction
@@ -34,8 +34,10 @@ export async function accountLink(
 
     await upsertUserV2(interaction.user.id, data);
 
-    const emote = getTierEmoji(data.level, client) ?? null;
-    const levelEmote = (emote) ? ' ' + emote : '';
+    const tier = trueGoldTiers.find(t => data.level >= t.min && data.level <= t.max)
+    const emote = tier ? client.emoji(tier.emoji) : '';
+    const levelEmote = emote ? ' ' + emote : '';
+
     const embed = new EmbedBuilder()
       .setColor(parseInt("#FFEB3B".replace(/^#/, ""), 16))
       .setTitle("Profile Linked: " + data.name)
@@ -44,7 +46,7 @@ export async function accountLink(
           data.name +
           "\n" +
           "**Town Center Level:** " +
-          data.level + levelEmote +
+          data.level + levelEmote + ` ${tier}` +
           "\n" +
           "**Kingdom:** #" +
           data.kingdom

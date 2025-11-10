@@ -1,6 +1,6 @@
 
 /* True gold levels */
-const trueGoldTiers = [
+export const trueGoldTiers = [
   { min: 35, max: 39, emoji: 'tg1' },
   { min: 40, max: 44, emoji: 'tg2' },
   { min: 45, max: 49, emoji: 'tg3' },
