@@ -1,11 +1,11 @@
 
 /* True gold levels */
 export const trueGoldTiers = [
-  { min: 35, max: 39, emoji: 'tg1' },
-  { min: 40, max: 44, emoji: 'tg2' },
-  { min: 45, max: 49, emoji: 'tg3' },
-  { min: 50, max: 54, emoji: 'tg4' },
-  { min: 55, max: Infinity, emoji: 'tg5' },
+  { min: 35, max: 39, emoji: 'TG1' },
+  { min: 40, max: 44, emoji: 'TG2' },
+  { min: 45, max: 49, emoji: 'TG3' },
+  { min: 50, max: 54, emoji: 'TG4' },
+  { min: 55, max: Infinity, emoji: 'TG5' },
 ];
 
 /**
