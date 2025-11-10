@@ -3,7 +3,7 @@ import { ExtendedClient } from "@/types/extendedClient";
 import { ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
 import { ApiResponse } from "@/types/api";
 import https from "https";
-
+import { getTierEmoji } from "@/utils/kingshot";
 export async function accountLink(
   client: ExtendedClient,
   interaction: ChatInputCommandInteraction
@@ -34,7 +34,7 @@ export async function accountLink(
 
     await upsertUserV2(interaction.user.id, data);
 
-    const emote = await getTierEmoji(data.level, client) ?? null;
+    const emote = getTierEmoji(data.level, client) ?? null;
     const levelEmote = (emote) ? ' ' + emote : '';
     const embed = new EmbedBuilder()
       .setColor(parseInt("#FFEB3B".replace(/^#/, ""), 16))

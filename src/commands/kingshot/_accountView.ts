@@ -1,5 +1,6 @@
 import { fetchUserV2 } from "@/database/functions";
 import { ExtendedClient } from "@/types/extendedClient";
+import { getTierEmoji } from "@/utils/kingshot";
 import { ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
 
 // This type isn't used directly.

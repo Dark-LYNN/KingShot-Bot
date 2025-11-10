@@ -14,7 +14,7 @@ const trueGoldTiers = [
  * @param client - client instance
  * @returns 
  */
-function getTierEmoji(level: number, client: any):string {
+export function getTierEmoji(level: number, client: any):string {
   const tier = trueGoldTiers.find(t => level >= t.min && level <= t.max);
   return tier ? client.emoji(tier.emoji) : '';
 }
