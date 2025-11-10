@@ -3,6 +3,8 @@ import { Command } from './commands';
 import { Button } from './buttons';
 import { Modal } from './modal';
 import { logger } from '@/utils';
+import path from 'path';
+import { readFileSync } from 'fs';
 
 
 /**
@@ -12,8 +14,8 @@ export class ExtendedClient extends Client<true> {
   readonly commands: Collection<string, Command>;
   readonly subcommands: Collection<string, Command>;
   readonly buttons: Collection<string, Button>;
-  readonly emoji: Collection<string, string>;
   readonly modals: Collection<string, Modal>;
+  private emojiMap: Record<string, string> = {};
 
   /**
    * Creates a new ExtendedClient instance.
@@ -24,8 +26,9 @@ export class ExtendedClient extends Client<true> {
     this.commands = new Collection();
     this.subcommands = new Collection();
     this.buttons = new Collection();
-    this.emoji = new Collection();
     this.modals = new Collection();
+
+    this.loadEmojis();
   }
 
   /**
@@ -42,13 +45,23 @@ export class ExtendedClient extends Client<true> {
     return value;
   }
 
-  /**
-   * Finds a custom emoji by name.
-   * @param {string} name - The emoji name.
-   * @returns {string | undefined} The emoji ID or undefined if not found.
-   */
-  findEmoji(name: string): string | undefined {
-    return this.emoji.get(name);
+  private loadEmojis() {
+    try {
+      const emojiFile = path.join(__dirname, '../../public/emotes.json');
+      const raw = readFileSync(emojiFile, 'utf-8');
+      this.emojiMap = JSON.parse(raw);
+      logger.info(`Loaded ${Object.keys(this.emojiMap).length} emojis`);
+    } catch (err) {
+      logger.error('Failed to load emojis.json', err);
+    }
   }
-
+  
+  
+  /**
+   * Gets a custom emoji by name.
+   * @param name The emoji key from the JSON
+   */
+  emoji(name: string): string {
+    return this.emojiMap[name] ?? '';
+  }
 }

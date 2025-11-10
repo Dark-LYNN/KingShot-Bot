@@ -5,7 +5,7 @@ import { ApiResponse } from "@/types/api";
 import https from "https";
 
 export async function accountLink(
-  _client: ExtendedClient,
+  client: ExtendedClient,
   interaction: ChatInputCommandInteraction
 ) {
   try {
@@ -34,6 +34,8 @@ export async function accountLink(
 
     await upsertUserV2(interaction.user.id, data);
 
+    const emote = await getTierEmoji(data.level, client) ?? null;
+    const levelEmote = (emote) ? ' ' + emote : '';
     const embed = new EmbedBuilder()
       .setColor(parseInt("#FFEB3B".replace(/^#/, ""), 16))
       .setTitle("Profile Linked: " + data.name)
@@ -42,7 +44,7 @@ export async function accountLink(
           data.name +
           "\n" +
           "**Town Center Level:** " +
-          data.level +
+          data.level + levelEmote +
           "\n" +
           "**Kingdom:** #" +
           data.kingdom

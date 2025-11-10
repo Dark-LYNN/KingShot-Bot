@@ -20,7 +20,7 @@ export default {
 
     if (!client.ws) {
       await interaction.reply(
-        `${client.findEmoji('BOT-fail')} Bot is not fully connected to Discord.`,
+        `:x: Bot is not fully connected to Discord.`,
       );
       logger.debug('got /ping Bot is not fully connected to Discord.');
       return;

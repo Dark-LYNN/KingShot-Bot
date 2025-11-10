@@ -17,8 +17,9 @@ export type ApiResponse = {
   timestamp?: string;
 };
 
+
 export async function accountView(
-  _client: ExtendedClient,
+  client: ExtendedClient,
   interaction: ChatInputCommandInteraction
 ) {
   try {
@@ -33,13 +34,15 @@ export async function accountView(
       return;
     }
 
+    const emote = await getTierEmoji(userInfo.level, client) ?? null;
+    const levelEmote = (emote) ? ' ' + emote : '';
     const embed = new EmbedBuilder()
       .setTitle(`${interaction.user.displayName}'s Linked account`)
       .setColor(parseInt("#FFEB3B".replace(/^#/, ""), 16))
       .setDescription(
         "**Username:**  " + userInfo.username + "\n" +
         "**Kingdom:**  " + userInfo.kingdom + "\n" +
-        "**TC Level:**  " + userInfo.level + "\n" +
+        "**TC Level:**  " + userInfo.level + levelEmote + "\n" +
         "**User ID:**  " + userInfo.player_id
       )
       .setFooter({ text: "Made with ❤️ by Lynnux" });
