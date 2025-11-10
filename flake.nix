@@ -21,6 +21,7 @@
             pkgs.direnv
             pkgs.openssl
             pkgs.git
+            pkgs.python310
           ];
         };
       }
