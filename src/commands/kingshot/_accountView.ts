@@ -35,7 +35,7 @@ export async function accountView(
       return;
     }
 
-    const emote = await getTierEmoji(userInfo.level, client) ?? null;
+    const emote = getTierEmoji(userInfo.level, client) ?? null;
     const levelEmote = (emote) ? ' ' + emote : '';
     const embed = new EmbedBuilder()
       .setTitle(`${interaction.user.displayName}'s Linked account`)

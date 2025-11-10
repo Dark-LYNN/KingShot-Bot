@@ -62,6 +62,6 @@ export class ExtendedClient extends Client<true> {
    * @param name The emoji key from the JSON
    */
   emoji(name: string): string {
-    return this.emojiMap[name] ?? '';
+    return this.emojiMap[name.toUpperCase()] ?? '';
   }
 }
