@@ -1,14 +1,6 @@
-import { chromium } from 'playwright';
 import { ApplicationIntegrationType, ChatInputCommandInteraction, EmbedBuilder, InteractionContextType, SlashCommandBuilder } from 'discord.js';
 import { ExtendedClient } from '../../types/extendedClient';
 import { fetchUserV2 } from '@/database/functions';
-
-type ApiResponse = {
-  code: 1,           // code = 1 already claimed 0 = success
-  data: [],          // Seems to always be empty!
-  err_code: number,  // 40011 = already claimed on other account 40008 = already redeemed 2000 = success
-  msg: string,       // "SAME TYPE EXCHANGE." = already claimed 
-}
 
 export default {
   data: new SlashCommandBuilder()
@@ -36,7 +28,7 @@ export default {
       return;
     };
 
-    const fid = userInfo.player_id.toString()
+    const fid = Number(userInfo.player_id);
     const code = interaction.options.getString('code')?.toUpperCase()
     if (!code) { await interaction.editReply({ content: ':x: Code not found.' }); return; }
 
@@ -68,75 +60,20 @@ export default {
   }
 }
 
-async function redeemCode(fid: string, code: string) {
-  const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage();
-
+async function redeemCode(playerId: number, giftCode: string): Promise<string> {
   try {
-    await page.goto('https://ks-giftcode.centurygame.com/', { waitUntil: 'networkidle' });
-
-    // Step 1: enter Player ID
-    const fidStr = fid
-    const playerInput = page.locator('input[placeholder="Player ID"]');
-
-    // Set value and dispatch input event so site detects it
-    await playerInput.evaluate((el, val) => {
-      const input = el as HTMLInputElement;
-      input.value = val;
-      input.dispatchEvent(new Event('input', { bubbles: true }));
-    }, fidStr);
-
-    // Optional: also fill normally to mimic typing
-    await playerInput.fill(fidStr);
-
-    const currentValue = await playerInput.evaluate((el) => (el as HTMLInputElement).value);
-
-    // Step 2: wait for login button to be enabled and click it
-    const loginBtn = page.locator('.login_btn:not(.disabled)');
-    await loginBtn.waitFor({ state: 'visible', timeout: 15000 });
-    await loginBtn.click();
-
-    // Wait a bit for server to process login
-    await page.waitForTimeout(1000);
-
-    // Step 3: wait for gift code input to be enabled
-    const codeInput = page.locator('input[placeholder="Enter Gift Code"]');
-    await page.waitForFunction(
-      (selector) => {
-        const el = document.querySelector<HTMLInputElement>(selector);
-        return el && !el.disabled;
-      },
-      'input[placeholder="Enter Gift Code"]',
-      { timeout: 20000 }
-    );    
-
-    // Step 4: fill gift code
-    await codeInput.fill(code);
-
-    await page.waitForTimeout(1000);
-
-    // Step 5: click exchange button
-    const exchangeBtn = page.locator('.exchange_btn');
-    await exchangeBtn.click({ force: true });
-
-    // Step 6: wait for modal message
-    const modalMsg = page.locator('.modal_content .msg');
-    await modalMsg.waitFor({ state: 'visible', timeout: 15000 });
-    const message = await modalMsg.textContent();
-
-    // Step 7: log localStorage
-    const localStorageData = await page.evaluate(() => {
-      const data: Record<string, string> = {};
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key) data[key] = localStorage.getItem(key) as string;
-      }
-      return data;
+    const res = await fetch('https://kingshot.net/api/gift-codes/redeem', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ playerId, giftCode })
     });
 
-    return message?.trim() || 'No message found';
-    
-  } finally {
-    await browser.close();
+    const json = await res.json() as { status: string; message: string };
+
+    if (json.status === 'success') return 'success';
+    return json.message || 'Unknown error.';
+  } catch (err) {
+    console.error('Redeem Code Error:', err);
+    return 'Failed to reach the server.';
   }
 }
