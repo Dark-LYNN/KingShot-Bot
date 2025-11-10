@@ -44,7 +44,7 @@ export async function accountView(
       .setDescription(
         "**Username:**  " + userInfo.username + "\n" +
         "**Kingdom:**  " + userInfo.kingdom + "\n" +
-        "**TC Level:**  " + userInfo.level + levelEmote + ` (${tier})` + "\n" +
+        "**TC Level:**  " + userInfo.level + levelEmote + ` (${tier?.emoji})` + "\n" +
         "**User ID:**  " + userInfo.player_id
       )
       .setFooter({ text: "Made with ❤️ by Lynnux" });

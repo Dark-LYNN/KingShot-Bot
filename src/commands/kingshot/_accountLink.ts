@@ -46,7 +46,7 @@ export async function accountLink(
           data.name +
           "\n" +
           "**Town Center Level:** " +
-          data.level + levelEmote + ` ${tier}` +
+          data.level + levelEmote + ` ${tier?.emoji}` +
           "\n" +
           "**Kingdom:** #" +
           data.kingdom
