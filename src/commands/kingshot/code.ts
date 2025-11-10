@@ -2,6 +2,16 @@ import { ApplicationIntegrationType, ChatInputCommandInteraction, EmbedBuilder, 
 import { ExtendedClient } from '../../types/extendedClient';
 import { fetchUserV2 } from '@/database/functions';
 
+interface RedeemCode {
+  status: string,
+  data: {
+    redemption: string
+  },
+  message: string,
+  meta: null,
+  timestamp: string
+}
+
 export default {
   data: new SlashCommandBuilder()
     .setName('code')
@@ -32,12 +42,12 @@ export default {
     const code = interaction.options.getString('code')?.toUpperCase()
     if (!code) { await interaction.editReply({ content: ':x: Code not found.' }); return; }
 
-    const message = await redeemCode(fid, code);
+    const request = await redeemCode(fid, code);
     const embed = new EmbedBuilder()
       .setFooter({ text: 'Made with ❤️ by Lynnux' });
 
 
-    if (message === "Redeemed, please claim the rewards in your mail!") {
+    if (request.status === "success") {
       embed
         .setTitle('Code Redeemed')
         .setColor(parseInt('#FFEB3B'.replace(/^#/, ''), 16))
@@ -49,7 +59,7 @@ export default {
       embed
         .setColor(parseInt('#FF3333'.replace(/^#/, ''), 16))
         .setTitle('Code Couldn\'t be redeemed')
-        .setDescription(message)
+        .setDescription(request.message)
     }
     
     if (userInfo.avatar_url) {
@@ -60,7 +70,7 @@ export default {
   }
 }
 
-async function redeemCode(playerId: number, giftCode: string): Promise<string> {
+async function redeemCode(playerId: number, giftCode: string): Promise<RedeemCode> {
   try {
     const res = await fetch('https://kingshot.net/api/gift-codes/redeem', {
       method: 'POST',
@@ -68,12 +78,24 @@ async function redeemCode(playerId: number, giftCode: string): Promise<string> {
       body: JSON.stringify({ playerId, giftCode })
     });
 
-    const json = await res.json() as { status: string; message: string };
+    const json = await res.json() as RedeemCode;
 
-    if (json.status === 'success') return 'success';
-    return json.message || 'Unknown error.';
+    return {
+      status: json.status ?? 'error',
+      data: json.data ?? { redemption: 'FAILED' },
+      message: json.message ?? 'Unknown error.',
+      meta: json.meta ?? null,
+      timestamp: json.timestamp ?? new Date().toISOString()
+    };
   } catch (err) {
     console.error('Redeem Code Error:', err);
-    return 'Failed to reach the server.';
+
+    return {
+      status: 'error',
+      data: { redemption: 'FAILED' },
+      message: 'Failed to reach the server.',
+      meta: null,
+      timestamp: new Date().toISOString()
+    };
   }
 }
