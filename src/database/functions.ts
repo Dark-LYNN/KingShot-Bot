@@ -1,42 +1,53 @@
-import { ApiResponse } from "@/commands/kingshot/_accountLink";
 import { db } from ".";
-import { promises } from "dns";
-import { UserTable } from "./db.types";
 
 const now = Date.now();
 
-export async function upsertUser(discordId: string, apiData: ApiResponse["data"]) {
+export async function upsertUserV2(
+  discordId: string,
+  apiData: {
+    playerId: number;
+    name: string;
+    kingdom: number;
+    level: number;
+    profilePhoto: string;
+  } | null
+) {
+  if (!apiData) return;
+
+  const now = new Date().toISOString();
+
   await db
-    .insertInto("users")
+    .insertInto("users_v2")
     .values({
       user_id: discordId,
-      fid: BigInt(apiData.fid),
-      username: apiData.nickname,
-      avatar_url: apiData.avatar_image,
-      level: apiData.stove_lv,
-      state: apiData.kid,
-      updated_at: now,
+      player_id: BigInt(apiData.playerId),
+      username: apiData.name,
+      kingdom: apiData.kingdom,
+      level: apiData.level,
+      avatar_url: apiData.profilePhoto,
       created_at: now,
+      updated_at: now,
     })
     .onConflict((oc) =>
       oc.column("user_id").doUpdateSet({
-        fid: BigInt(apiData.fid),
-        username: apiData.nickname,
-        avatar_url: apiData.avatar_image,
-        state: apiData.kid,
-        level: apiData.stove_lv,
-        updated_at: now
+        player_id: BigInt(apiData.playerId),
+        username: apiData.name,
+        kingdom: apiData.kingdom,
+        level: apiData.level,
+        avatar_url: apiData.profilePhoto,
+        updated_at: now,
       })
     )
     .execute();
+
+  // cleanup of legacy table
+  await db.deleteFrom("users").where("user_id", "=", discordId).execute();
 }
 
-export async function fetchUser(discordId: string) {
-  const result = await db
-    .selectFrom('users')
-    .where('user_id', '=', discordId)
+export async function fetchUserV2(discordId: string) {
+  return await db
+    .selectFrom("users_v2")
     .selectAll()
+    .where("user_id", "=", discordId)
     .executeTakeFirst();
-
-  return result;
 }

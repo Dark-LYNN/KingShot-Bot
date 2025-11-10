@@ -1,5 +1,4 @@
-import db from "@/database";
-import { fetchUser } from "@/database/functions";
+import { fetchUserV2 } from "@/database/functions";
 import { ExtendedClient } from "@/types/extendedClient";
 import { ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
 
@@ -24,7 +23,7 @@ export async function accountView(
 ) {
   try {
     const user = interaction.user;
-    const userInfo = await fetchUser(user.id);
+    const userInfo = await fetchUserV2(user.id);
 
     if (!userInfo) {
       await interaction.editReply({
@@ -39,9 +38,9 @@ export async function accountView(
       .setColor(parseInt("#FFEB3B".replace(/^#/, ""), 16))
       .setDescription(
         "**Username:**  " + userInfo.username + "\n" +
-        "**Kingdom:**  " + userInfo.state + "\n" +
+        "**Kingdom:**  " + userInfo.kingdom + "\n" +
         "**TC Level:**  " + userInfo.level + "\n" +
-        "**User ID:**  " + userInfo.fid
+        "**User ID:**  " + userInfo.player_id
       )
       .setFooter({ text: "Made with ❤️ by Lynnux" });
 

@@ -4,17 +4,22 @@ import { sql } from 'kysely';
 
 export async function initDatabase() {
   await database.schema
-    .createTable('users')
+    .createTable("users_v2")
     .ifNotExists()
-    .addColumn('user_id', 'text', col => col.primaryKey().notNull())
-    .addColumn('fid', 'bigint', col => col.unique().notNull())
-    .addColumn('username', 'text')
-    .addColumn('avatar_url', 'text')
-    .addColumn('state', 'integer', col => col.notNull().defaultTo(0))
-    .addColumn('level', 'integer', col => col.notNull().defaultTo(0))
-    .addColumn('created_at', 'integer', col => col.notNull().defaultTo(sql`CURRENT_TIMESTAMP`))
-    .addColumn('updated_at', 'integer', col => col.notNull().defaultTo(sql`CURRENT_TIMESTAMP`))
+    .addColumn("user_id", "text", (col) => col.primaryKey().notNull())
+    .addColumn("player_id", "bigint", (col) => col.notNull())
+    .addColumn("username", "text", (col) => col.notNull())
+    .addColumn("kingdom", "integer", (col) => col.notNull())
+    .addColumn("level", "integer", (col) => col.notNull())
+    .addColumn("avatar_url", "text")
+    .addColumn("created_at", "text", (col) =>
+      col.notNull().defaultTo(sql`CURRENT_TIMESTAMP`)
+    )
+    .addColumn("updated_at", "text", (col) =>
+      col.notNull().defaultTo(sql`CURRENT_TIMESTAMP`)
+    )
     .execute();
+
 
   logger.info('🗃️  | DB initialized!');
 }

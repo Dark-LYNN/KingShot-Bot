@@ -1,21 +1,8 @@
-import { upsertUser } from "@/database/functions";
+import { upsertUserV2 } from "@/database/functions";
 import { ExtendedClient } from "@/types/extendedClient";
 import { ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
+import { ApiResponse } from "@/types/api";
 import https from "https";
-
-export type ApiResponse = {
-  status: "success" | "error";
-  data: {
-    playerId: number;
-    name: string;
-    kingdom: number;
-    level: number;
-    profilePhoto: string;
-  } | null;
-  message: string;
-  meta?: any;
-  timestamp?: string;
-};
 
 export async function accountLink(
   _client: ExtendedClient,
@@ -32,6 +19,10 @@ export async function accountLink(
 
     const json = await getPlayerInfo(fid);
 
+    if (!json.data) {
+      throw new Error("API returned null data");
+    }
+    
     if (json.status !== "success" || !json.data) {
       await interaction.editReply({
         content: ":x: Your request does not seem right, please try again later.",
@@ -41,15 +32,7 @@ export async function accountLink(
 
     const data = json.data;
 
-    const userData = {
-      fid: data.playerId,
-      nickname: data.name,
-      kid: data.kingdom,
-      stove_lv: data.level,
-      stove_lv_content: data.level,
-      avatar_image: data.profilePhoto,
-      total_recharge_amount: 0,         // not provided anymore, keep placeholder
-    };
+    await upsertUserV2(interaction.user.id, data);
 
     const embed = new EmbedBuilder()
       .setColor(parseInt("#FFEB3B".replace(/^#/, ""), 16))
@@ -71,7 +54,7 @@ export async function accountLink(
     }
 
     await interaction.editReply({ embeds: [embed] });
-    await upsertUser(interaction.user.id, userData);
+    await upsertUserV2(interaction.user.id, data);
   } catch (err) {
     console.error("Error:", err);
     await interaction.editReply({

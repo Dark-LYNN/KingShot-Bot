@@ -1,5 +1,5 @@
 import db from "@/database";
-import { fetchUser } from "@/database/functions";
+import { fetchUserV2 } from "@/database/functions";
 import { ExtendedClient } from "@/types/extendedClient";
 import { ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
 
@@ -9,7 +9,7 @@ export async function accountDisconnect(
 ) {
   try {
     const user = interaction.user;
-    const userInfo = await fetchUser(user.id);
+    const userInfo = await fetchUserV2(user.id);
 
     if (!userInfo) {
       await interaction.editReply({
@@ -23,13 +23,13 @@ export async function accountDisconnect(
       .setTitle(`${interaction.user.displayName}'s account disconnected`)
       .setColor(parseInt("#FFEB3B".replace(/^#/, ""), 16))
       .setDescription(
-        `The account **${userInfo.username}** from **#${userInfo.state}** has been disconnected from <@${user.id}>.`
+        `The account **${userInfo.username}** from **#${userInfo.kingdom}** has been disconnected from <@${user.id}>.`
       )
       .setFooter({ text: "Made with ❤️ by Lynnux" });
 
     await interaction.editReply({ embeds: [embed] });
 
-    await db.deleteFrom("users").where("user_id", "=", user.id).execute();
+    await db.deleteFrom("users_v2").where("user_id", "=", user.id).execute();
   } catch (err) {
     console.error("Error:", err);
     await interaction.editReply({

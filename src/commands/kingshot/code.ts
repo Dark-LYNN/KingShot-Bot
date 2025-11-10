@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 import { ApplicationIntegrationType, ChatInputCommandInteraction, EmbedBuilder, InteractionContextType, SlashCommandBuilder } from 'discord.js';
 import { ExtendedClient } from '../../types/extendedClient';
-import { fetchUser } from '@/database/functions';
+import { fetchUserV2 } from '@/database/functions';
 
 type ApiResponse = {
   code: 1,           // code = 1 already claimed 0 = success
@@ -29,14 +29,14 @@ export default {
     await interaction.deferReply({ flags:"Ephemeral" })
 
     const user = interaction.user;
-    const userInfo = await fetchUser(user.id)
+    const userInfo = await fetchUserV2(user.id)
     
     if (!userInfo) {
       await interaction.editReply({ content: ':x: You don\'t seem to have an account linked. Please link a account with </account link:1408600312851333191> ' });
       return;
     };
 
-    const fid = userInfo.fid.toString()
+    const fid = userInfo.player_id.toString()
     const code = interaction.options.getString('code')?.toUpperCase()
     if (!code) { await interaction.editReply({ content: ':x: Code not found.' }); return; }
 
@@ -50,7 +50,7 @@ export default {
         .setTitle('Code Redeemed')
         .setColor(parseInt('#FFEB3B'.replace(/^#/, ''), 16))
         .setDescription(
-          'The gift-code **' + code + '** has been redeemed on ' + userInfo.username + ' from #' + userInfo.state + '\n' +
+          'The gift-code **' + code + '** has been redeemed on ' + userInfo.username + ' from #' + userInfo.kingdom + '\n' +
           '-# *Rewards will be directly sent to Character’s mail after redemption'
         )
     } else {
